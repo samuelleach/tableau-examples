@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mapsource inline="false" version="8.1">
+    <connection class="OpenStreetMap" indicator-server="a.tile.stamen.com" layer-separator="/" max-stretch="1.2" min-shrink="0.667" offline="" port="80" server="a.tile.stamen.com" url-format="{L}/{Z}/{X}/{Y}.png"/>
+    <layers>
+      <layer display-name="Toner" name="toner" show-ui="true" type="features"/>
+      <layer display-name="Terrain (USA only)" name="terrain" show-ui="true" type="features"/>
+      <layer display-name="Watercolor" name="watercolor" show-ui="true" type="features"/>
+      <layer display-name="Burning Map" name="burningmap" show-ui="true" type="features"/>
+      <layer display-name="Trees, Cabs, Crime (SF only)" name="trees-cabs-crime" show-ui="true" type="features"/>
+    </layers>
+    <mapsource-defaults version="8.0">
+        <style>
+            <style-rule element="map-layer">
+                <format attr="enabled" id="toner" value="true"/>
+            </style-rule>
+            <style-rule element="map">
+                <format attr="washout" value="0.0"/>
+                <format attr='map-style' value='' />
+            </style-rule>
+        </style>
+    </mapsource-defaults>
+</mapsource>

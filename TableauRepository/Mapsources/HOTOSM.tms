@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mapsource inline="false" version="8.1">
+    <connection class="OpenStreetMap" indicator-server="c.tile.openstreetmap.fr" layer-separator="/" max-stretch="1.2" min-shrink="0.667" offline="" port="80" server="c.tile.openstreetmap.fr" url-format="{L}/{Z}/{X}/{Y}.png"/>
+    <layers>
+      <layer display-name="HOTOSM" name="hot" show-ui="true" type="features"/>
+    </layers>
+    <mapsource-defaults version="8.0">
+        <style>
+            <style-rule element="map-layer">
+                <format attr="enabled" id="hot" value="true"/>
+            </style-rule>
+            <style-rule element="map">
+                <format attr="washout" value="0.0"/>
+                <format attr='map-style' value='' />
+            </style-rule>
+        </style>
+    </mapsource-defaults>
+</mapsource>

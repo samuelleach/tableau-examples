@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mapsource inline="false" version="8.1">
+    <connection class="OpenStreetMap" indicator-server="map1.vis.earthdata.nasa.gov" layer-separator="/" max-stretch="1.2" min-shrink="0.667" offline="" port="80" server="map1.vis.earthdata.nasa.gov" url-format="/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/2013-07-15/{L}/{Z}/{Y}/{X}.jpg"/>
+    <layers>
+      <layer display-name="NASA GIBS" name="GoogleMapsCompatible_Level9" show-ui="true" type="features"/>
+    </layers>
+    <mapsource-defaults version="8.0">
+        <style>
+            <style-rule element="map-layer">
+                <format attr="enabled" id="GoogleMapsCompatible_Level9" value="true"/>
+            </style-rule>
+            <style-rule element="map">
+                <format attr="washout" value="0.0"/>
+                <format attr='map-style' value='' />
+            </style-rule>
+        </style>
+    </mapsource-defaults>
+</mapsource>
