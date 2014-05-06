@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource formatted-name='Sample - Coffee Chain (Access)' inline='true' version='8.2' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8100.13.0808.2000                -->
+  <connection authentication='no' class='msaccess' driver='' filename='Sample - Coffee Chain.mdb' mdwpath='' tablename='factTable'>
+    <relation join='inner' type='join'>
+      <clause type='join'>
+        <expression op='='>
+          <expression op='[factTable].[ProductId]'>
+          </expression>
+          <expression op='[Product].[ProductId]'>
+          </expression>
+        </expression>
+      </clause>
+      <relation join='inner' type='join'>
+        <clause type='join'>
+          <expression op='='>
+            <expression op='[factTable].[Area Code]'>
+            </expression>
+            <expression op='[Location].[Area Code]'>
+            </expression>
+          </expression>
+        </clause>
+        <relation name='factTable' table='[factTable]' type='table' />
+        <relation name='Location' table='[Location]' type='table' />
+      </relation>
+      <relation name='Product' table='[Product]' type='table' />
+    </relation>
+    <cols>
+      <map key='[Area Code]' value='[factTable].[Area Code]' />
+      <map key='[Budget COGS]' value='[factTable].[Budget COGS]' />
+      <map key='[Budget Margin]' value='[factTable].[Budget Margin]' />
+      <map key='[Budget Profit]' value='[factTable].[Budget Profit]' />
+      <map key='[Budget Sales]' value='[factTable].[Budget Sales]' />
+      <map key='[COGS]' value='[factTable].[COGS]' />
+      <map key='[Date]' value='[factTable].[Date]' />
+      <map key='[Inventory]' value='[factTable].[Inventory]' />
+      <map key='[Location_Area Code]' value='[Location].[Area Code]' />
+      <map key='[Margin]' value='[factTable].[Margin]' />
+      <map key='[Market Size]' value='[Location].[Market Size]' />
+      <map key='[Market]' value='[Location].[Market]' />
+      <map key='[Marketing]' value='[factTable].[Marketing]' />
+      <map key='[Product Line]' value='[Product].[Product Line]' />
+      <map key='[Product Type]' value='[Product].[Product Type]' />
+      <map key='[ProductId]' value='[factTable].[ProductId]' />
+      <map key='[Product]' value='[Product].[Product]' />
+      <map key='[Product_ProductId]' value='[Product].[ProductId]' />
+      <map key='[Profit]' value='[factTable].[Profit]' />
+      <map key='[Sales]' value='[factTable].[Sales]' />
+      <map key='[State]' value='[Location].[State]' />
+      <map key='[Total Expenses]' value='[factTable].[Total Expenses]' />
+      <map key='[Type]' value='[Product].[Type]' />
+    </cols>
+  </connection>
+  <column aggregation='Sum' datatype='integer' name='[Area Code]' role='dimension' semantic-role='[AreaCode].[Name]' type='ordinal'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget COGS]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget Margin]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget Profit]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget Sales]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[COGS]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='date' datatype-customized='true' name='[Date]' role='dimension' type='ordinal'>
+  </column>
+  <column aggregation='Avg' datatype='integer' default-format='n#,##0;-#,##0' name='[Inventory]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Sum' datatype='integer' default-format='*000' hidden='true' name='[Location_Area Code]' role='dimension' semantic-role='[AreaCode].[Name]' type='ordinal'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Margin]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Marketing]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column datatype='integer' hidden='true' name='[ProductId]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='integer' hidden='true' name='[Product_ProductId]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Total Expenses]' role='measure' type='quantitative'>
+  </column>
+  <folder name='Actuals' role='measures'>
+    <folder-item name='[COGS]' type='field' />
+    <folder-item name='[Inventory]' type='field' />
+    <folder-item name='[Margin]' type='field' />
+    <folder-item name='[Marketing]' type='field' />
+    <folder-item name='[Profit]' type='field' />
+    <folder-item name='[Sales]' type='field' />
+    <folder-item name='[Total Expenses]' type='field' />
+  </folder>
+  <folder name='Budget' role='measures'>
+    <folder-item name='[Budget COGS]' type='field' />
+    <folder-item name='[Budget Margin]' type='field' />
+    <folder-item name='[Budget Profit]' type='field' />
+    <folder-item name='[Budget Sales]' type='field' />
+  </folder>
+  <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='false' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;UNITED STATES&quot;' />
+  </semantic-values>
+</datasource>

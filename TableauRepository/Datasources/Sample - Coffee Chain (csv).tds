@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource formatted-name='Sample - Coffee Chain (CSV)' inline='true' version='8.2' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8100.13.1119.2300                -->
+  <connection class='textscan' dbname='' directory='..\Datasources\' filename='Sample - Coffee Chain.csv' username=''>
+    <relation name='Sample - Coffee Chain#csv' table='[Sample - Coffee Chain#csv]' type='table' />
+  </connection>
+  <column aggregation='Sum' datatype='integer' name='[Area Code]' role='dimension' semantic-role='[AreaCode].[Name]' type='ordinal'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget COGS]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget Margin]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget Profit]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Budget Sales]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[COGS]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='date' datatype-customized='true' name='[Date]' role='dimension' type='ordinal'>
+  </column>
+  <column aggregation='Avg' datatype='integer' default-format='n#,##0;-#,##0' name='[Inventory]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Sum' datatype='integer' default-format='*000' hidden='true' name='[Location_Area Code]' role='dimension' semantic-role='[AreaCode].[Name]' type='ordinal'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Margin]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Marketing]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column datatype='integer' hidden='true' name='[ProductId]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='integer' hidden='true' name='[Product_ProductId]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Sales]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Total Expenses]' role='measure' type='quantitative'>
+  </column>
+  <folder name='Actuals' role='measures'>
+    <folder-item name='[COGS]' type='field' />
+    <folder-item name='[Inventory]' type='field' />
+    <folder-item name='[Margin]' type='field' />
+    <folder-item name='[Marketing]' type='field' />
+    <folder-item name='[Profit]' type='field' />
+    <folder-item name='[Sales]' type='field' />
+    <folder-item name='[Total Expenses]' type='field' />
+  </folder>
+  <folder name='Budget' role='measures'>
+    <folder-item name='[Budget COGS]' type='field' />
+    <folder-item name='[Budget Margin]' type='field' />
+    <folder-item name='[Budget Profit]' type='field' />
+    <folder-item name='[Budget Sales]' type='field' />
+  </folder>
+  <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='false' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;UNITED STATES&quot;' />
+  </semantic-values>
+</datasource>

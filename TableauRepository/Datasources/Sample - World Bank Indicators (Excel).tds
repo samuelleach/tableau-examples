@@ -1,0 +1,1282 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource formatted-name='Sample - World Bank Indicators (Excel)' inline='true' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8200.14.0303.0945             -->
+  <connection auto-extract='yes' class='excel-direct' filename='Sample - World Bank Indicators.xlsx'>
+    <relation join='left' type='join'>
+      <clause type='join'>
+        <expression op='='>
+          <expression op='[&apos;Data by country$&apos;].[Country Name]'>
+          </expression>
+          <expression op='[&apos;Regions and subregions$&apos;].[Country]'>
+          </expression>
+        </expression>
+      </clause>
+      <relation name='&apos;Data by country$&apos;' table='[&apos;Data by country$&apos;]' type='table'>
+        <columns header='yes'>
+          <column datatype='string' name='Country Name' ordinal='0' />
+          <column datatype='datetime' name='Date' ordinal='1' />
+          <column datatype='string' name='Stock: Listed domestic companies (count)' ordinal='2' />
+          <column datatype='string' name='Stock: Market cap companies (current US$)' ordinal='3' />
+          <column datatype='string' name='Stock: Traded, total value (current US$)' ordinal='4' />
+          <column datatype='string' name='Stock: Market cap of companies (% GDP)' ordinal='5' />
+          <column datatype='string' name='Stock: Traded, total value (% GDP)' ordinal='6' />
+          <column datatype='string' name='Stock: Traded, turnover ratio (%)' ordinal='7' />
+          <column datatype='real' name='Banks: Comm branches (per 100k adults)' ordinal='8' />
+          <column datatype='real' name='Banks: Automated tellers (per 100k adults)' ordinal='9' />
+          <column datatype='real' name='Finance: Consumer price index (2005 = 100)' ordinal='10' />
+          <column datatype='string' name='Finance: Deposit interest rate (%)' ordinal='11' />
+          <column datatype='real' name='Finance: Lending interest rate (%)' ordinal='12' />
+          <column datatype='real' name='Finance: Real interest rate (%)' ordinal='13' />
+          <column datatype='real' name='Business: Start-up proc cost (% GNI per capita)' ordinal='14' />
+          <column datatype='real' name='Business: Cost to export ($ per container)' ordinal='15' />
+          <column datatype='real' name='Business: Cost to import ($ per container)' ordinal='16' />
+          <column datatype='string' name='Business: Ease of biz index (1=easiest)' ordinal='17' />
+          <column datatype='real' name='Business: Start-up procedures (count)' ordinal='18' />
+          <column datatype='real' name='Business: Legal rights (0=weak, 10=strong)' ordinal='19' />
+          <column datatype='real' name='Business: Time to start a business (days)' ordinal='20' />
+          <column datatype='real' name='Business: Time to prep &amp; pay taxes (hours)' ordinal='21' />
+          <column datatype='real' name='Business: Total tax rate (% of commercial profits)' ordinal='22' />
+          <column datatype='real' name='Business: Firing cost (weeks of wages)' ordinal='23' />
+          <column datatype='real' name='R&amp;D: Scientific &amp; tech articles' ordinal='24' />
+          <column datatype='real' name='Transit: Air transport, passengers (count)' ordinal='25' />
+          <column datatype='string' name='Transit: Railways, (million passenger-km)' ordinal='26' />
+          <column datatype='real' name='Transit: Passenger cars (per 1,000 people)' ordinal='27' />
+          <column datatype='real' name='Business: Mobile phone subscribers' ordinal='28' />
+          <column datatype='real' name='Business: Internet users (per 100 people)' ordinal='29' />
+          <column datatype='real' name='Military: Armed forces personnel' ordinal='30' />
+          <column datatype='real' name='Military: Expenditure (% GDP)' ordinal='31' />
+          <column datatype='real' name='Military: Expenditure (% central govt exp)' ordinal='32' />
+          <column datatype='real' name='Business: Exports (% GDP)' ordinal='33' />
+          <column datatype='real' name='Business: Imports (% GDP)' ordinal='34' />
+          <column datatype='real' name='Business: Trade (% GDP)' ordinal='35' />
+          <column datatype='real' name='Business: Exports (current US$)' ordinal='36' />
+          <column datatype='real' name='Business: Imports (current US$)' ordinal='37' />
+          <column datatype='real' name='Finance: GDP (current US$)' ordinal='38' />
+          <column datatype='real' name='Finance: GDP per capita (current US$)' ordinal='39' />
+          <column datatype='real' name='Finance: Net income from abroad (current LCU)' ordinal='40' />
+          <column datatype='real' name='Government: Seats women in nat parliament (%)' ordinal='41' />
+          <column datatype='real' name='Health: Mortality, under-5 (per 1,000 live births)' ordinal='42' />
+          <column datatype='real' name='Health: Health expenditure per capita (current US$)' ordinal='43' />
+          <column datatype='real' name='Health: Health expenditure, total (% GDP)' ordinal='44' />
+          <column datatype='real' name='Population: Total (count)' ordinal='45' />
+          <column datatype='real' name='Population: Urban (count)' ordinal='46' />
+          <column datatype='real' name='Population:: Birth rate, crude (per 1,000)' ordinal='47' />
+          <column datatype='real' name='Health: Life expectancy at birth, female (years)' ordinal='48' />
+          <column datatype='real' name='Health: Life expectancy at birth, male (years)' ordinal='49' />
+          <column datatype='real' name='Health: Life expectancy at birth, total (years)' ordinal='50' />
+          <column datatype='real' name='Population: Ages 0-14 (% of total)' ordinal='51' />
+          <column datatype='real' name='Population: Ages 15-64 (% of total)' ordinal='52' />
+          <column datatype='real' name='Population: Ages 65+ (% of total)' ordinal='53' />
+          <column datatype='string' name='Business: International tourism inc (current US$)' ordinal='54' />
+          <column datatype='string' name='Business: International tourism, exp (current US$)' ordinal='55' />
+          <column datatype='real' name='Measures with values' ordinal='56' />
+        </columns>
+      </relation>
+      <relation name='&apos;Regions and subregions$&apos;' table='[&apos;Regions and subregions$&apos;]' type='table'>
+        <columns header='yes'>
+          <column datatype='string' name='Region' ordinal='0' />
+          <column datatype='string' name='Subregion' ordinal='1' />
+          <column datatype='string' name='Country' ordinal='2' />
+        </columns>
+      </relation>
+    </relation>
+    <cols>
+      <map key='[&apos;Regions and subregions$&apos;_Country]' value='[&apos;Regions and subregions$&apos;].[Country]' />
+      <map key='[&apos;Regions and subregions$&apos;_Region]' value='[&apos;Regions and subregions$&apos;].[Region]' />
+      <map key='[&apos;Regions and subregions$&apos;_Subregion]' value='[&apos;Regions and subregions$&apos;].[Subregion]' />
+      <map key='[Banks: Automated tellers (per 100k adults)]' value='[&apos;Data by country$&apos;].[Banks: Automated tellers (per 100k adults)]' />
+      <map key='[Banks: Comm branches (per 100k adults)]' value='[&apos;Data by country$&apos;].[Banks: Comm branches (per 100k adults)]' />
+      <map key='[Business: Cost to export ($ per container)]' value='[&apos;Data by country$&apos;].[Business: Cost to export ($ per container)]' />
+      <map key='[Business: Cost to import ($ per container)]' value='[&apos;Data by country$&apos;].[Business: Cost to import ($ per container)]' />
+      <map key='[Business: Ease of biz index (1=easiest)]' value='[&apos;Data by country$&apos;].[Business: Ease of biz index (1=easiest)]' />
+      <map key='[Business: Exports (% GDP)]' value='[&apos;Data by country$&apos;].[Business: Exports (% GDP)]' />
+      <map key='[Business: Exports (current US$)]' value='[&apos;Data by country$&apos;].[Business: Exports (current US$)]' />
+      <map key='[Business: Firing cost (weeks of wages)]' value='[&apos;Data by country$&apos;].[Business: Firing cost (weeks of wages)]' />
+      <map key='[Business: Imports (% GDP)]' value='[&apos;Data by country$&apos;].[Business: Imports (% GDP)]' />
+      <map key='[Business: Imports (current US$)]' value='[&apos;Data by country$&apos;].[Business: Imports (current US$)]' />
+      <map key='[Business: International tourism inc (current US$)]' value='[&apos;Data by country$&apos;].[Business: International tourism inc (current US$)]' />
+      <map key='[Business: International tourism, exp (current US$)]' value='[&apos;Data by country$&apos;].[Business: International tourism, exp (current US$)]' />
+      <map key='[Business: Internet users (per 100 people)]' value='[&apos;Data by country$&apos;].[Business: Internet users (per 100 people)]' />
+      <map key='[Business: Legal rights (0=weak, 10=strong)]' value='[&apos;Data by country$&apos;].[Business: Legal rights (0=weak, 10=strong)]' />
+      <map key='[Business: Mobile phone subscribers]' value='[&apos;Data by country$&apos;].[Business: Mobile phone subscribers]' />
+      <map key='[Business: Start-up proc cost (% GNI per capita)]' value='[&apos;Data by country$&apos;].[Business: Start-up proc cost (% GNI per capita)]' />
+      <map key='[Business: Start-up procedures (count)]' value='[&apos;Data by country$&apos;].[Business: Start-up procedures (count)]' />
+      <map key='[Business: Time to prep &amp; pay taxes (hours)]' value='[&apos;Data by country$&apos;].[Business: Time to prep &amp; pay taxes (hours)]' />
+      <map key='[Business: Time to start a business (days)]' value='[&apos;Data by country$&apos;].[Business: Time to start a business (days)]' />
+      <map key='[Business: Total tax rate (% of commercial profits)]' value='[&apos;Data by country$&apos;].[Business: Total tax rate (% of commercial profits)]' />
+      <map key='[Business: Trade (% GDP)]' value='[&apos;Data by country$&apos;].[Business: Trade (% GDP)]' />
+      <map key='[Country Name]' value='[&apos;Data by country$&apos;].[Country Name]' />
+      <map key='[Date]' value='[&apos;Data by country$&apos;].[Date]' />
+      <map key='[Finance: Consumer price index (2005 = 100)]' value='[&apos;Data by country$&apos;].[Finance: Consumer price index (2005 = 100)]' />
+      <map key='[Finance: Deposit interest rate (%)]' value='[&apos;Data by country$&apos;].[Finance: Deposit interest rate (%)]' />
+      <map key='[Finance: GDP (current US$)]' value='[&apos;Data by country$&apos;].[Finance: GDP (current US$)]' />
+      <map key='[Finance: GDP per capita (current US$)]' value='[&apos;Data by country$&apos;].[Finance: GDP per capita (current US$)]' />
+      <map key='[Finance: Lending interest rate (%)]' value='[&apos;Data by country$&apos;].[Finance: Lending interest rate (%)]' />
+      <map key='[Finance: Net income from abroad (current LCU)]' value='[&apos;Data by country$&apos;].[Finance: Net income from abroad (current LCU)]' />
+      <map key='[Finance: Real interest rate (%)]' value='[&apos;Data by country$&apos;].[Finance: Real interest rate (%)]' />
+      <map key='[Government: Seats women in nat parliament (%)]' value='[&apos;Data by country$&apos;].[Government: Seats women in nat parliament (%)]' />
+      <map key='[Health: Health expenditure per capita (current US$)]' value='[&apos;Data by country$&apos;].[Health: Health expenditure per capita (current US$)]' />
+      <map key='[Health: Health expenditure, total (% GDP)]' value='[&apos;Data by country$&apos;].[Health: Health expenditure, total (% GDP)]' />
+      <map key='[Health: Life expectancy at birth, female (years)]' value='[&apos;Data by country$&apos;].[Health: Life expectancy at birth, female (years)]' />
+      <map key='[Health: Life expectancy at birth, male (years)]' value='[&apos;Data by country$&apos;].[Health: Life expectancy at birth, male (years)]' />
+      <map key='[Health: Life expectancy at birth, total (years)]' value='[&apos;Data by country$&apos;].[Health: Life expectancy at birth, total (years)]' />
+      <map key='[Health: Mortality, under-5 (per 1,000 live births)]' value='[&apos;Data by country$&apos;].[Health: Mortality, under-5 (per 1,000 live births)]' />
+      <map key='[Measures with values]' value='[&apos;Data by country$&apos;].[Measures with values]' />
+      <map key='[Military: Armed forces personnel]' value='[&apos;Data by country$&apos;].[Military: Armed forces personnel]' />
+      <map key='[Military: Expenditure (% GDP)]' value='[&apos;Data by country$&apos;].[Military: Expenditure (% GDP)]' />
+      <map key='[Military: Expenditure (% central govt exp)]' value='[&apos;Data by country$&apos;].[Military: Expenditure (% central govt exp)]' />
+      <map key='[Population: Ages 0-14 (% of total)]' value='[&apos;Data by country$&apos;].[Population: Ages 0-14 (% of total)]' />
+      <map key='[Population: Ages 15-64 (% of total)]' value='[&apos;Data by country$&apos;].[Population: Ages 15-64 (% of total)]' />
+      <map key='[Population: Ages 65+ (% of total)]' value='[&apos;Data by country$&apos;].[Population: Ages 65+ (% of total)]' />
+      <map key='[Population: Total (count)]' value='[&apos;Data by country$&apos;].[Population: Total (count)]' />
+      <map key='[Population: Urban (count)]' value='[&apos;Data by country$&apos;].[Population: Urban (count)]' />
+      <map key='[Population:: Birth rate, crude (per 1,000)]' value='[&apos;Data by country$&apos;].[Population:: Birth rate, crude (per 1,000)]' />
+      <map key='[R&amp;D: Scientific &amp; tech articles]' value='[&apos;Data by country$&apos;].[R&amp;D: Scientific &amp; tech articles]' />
+      <map key='[Stock: Listed domestic companies (count)]' value='[&apos;Data by country$&apos;].[Stock: Listed domestic companies (count)]' />
+      <map key='[Stock: Market cap companies (current US$)]' value='[&apos;Data by country$&apos;].[Stock: Market cap companies (current US$)]' />
+      <map key='[Stock: Market cap of companies (% GDP)]' value='[&apos;Data by country$&apos;].[Stock: Market cap of companies (% GDP)]' />
+      <map key='[Stock: Traded, total value (% GDP)]' value='[&apos;Data by country$&apos;].[Stock: Traded, total value (% GDP)]' />
+      <map key='[Stock: Traded, total value (current US$)]' value='[&apos;Data by country$&apos;].[Stock: Traded, total value (current US$)]' />
+      <map key='[Stock: Traded, turnover ratio (%)]' value='[&apos;Data by country$&apos;].[Stock: Traded, turnover ratio (%)]' />
+      <map key='[Transit: Air transport, passengers (count)]' value='[&apos;Data by country$&apos;].[Transit: Air transport, passengers (count)]' />
+      <map key='[Transit: Passenger cars (per 1,000 people)]' value='[&apos;Data by country$&apos;].[Transit: Passenger cars (per 1,000 people)]' />
+      <map key='[Transit: Railways, (million passenger-km)]' value='[&apos;Data by country$&apos;].[Transit: Railways, (million passenger-km)]' />
+    </cols>
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>Country Name</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Country Name]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Country Name</remote-alias>
+        <ordinal>0</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Date</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[Date]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Date</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stock: Listed domestic companies (count)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Stock: Listed domestic companies (count)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Stock: Listed domestic companies (count)</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stock: Market cap companies (current US$)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Stock: Market cap companies (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Stock: Market cap companies (current US$)</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stock: Traded, total value (current US$)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Stock: Traded, total value (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Stock: Traded, total value (current US$)</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stock: Market cap of companies (% GDP)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Stock: Market cap of companies (% GDP)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Stock: Market cap of companies (% GDP)</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stock: Traded, total value (% GDP)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Stock: Traded, total value (% GDP)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Stock: Traded, total value (% GDP)</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stock: Traded, turnover ratio (%)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Stock: Traded, turnover ratio (%)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Stock: Traded, turnover ratio (%)</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Banks: Comm branches (per 100k adults)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Banks: Comm branches (per 100k adults)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Banks: Comm branches (per 100k adults)</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Banks: Automated tellers (per 100k adults)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Banks: Automated tellers (per 100k adults)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Banks: Automated tellers (per 100k adults)</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Finance: Consumer price index (2005 = 100)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Finance: Consumer price index (2005 = 100)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Finance: Consumer price index (2005 = 100)</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Finance: Deposit interest rate (%)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Finance: Deposit interest rate (%)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Finance: Deposit interest rate (%)</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Finance: Lending interest rate (%)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Finance: Lending interest rate (%)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Finance: Lending interest rate (%)</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Finance: Real interest rate (%)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Finance: Real interest rate (%)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Finance: Real interest rate (%)</remote-alias>
+        <ordinal>13</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Start-up proc cost (% GNI per capita)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Start-up proc cost (% GNI per capita)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Start-up proc cost (% GNI per capita)</remote-alias>
+        <ordinal>14</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Cost to export ($ per container)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Cost to export ($ per container)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Cost to export ($ per container)</remote-alias>
+        <ordinal>15</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Cost to import ($ per container)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Cost to import ($ per container)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Cost to import ($ per container)</remote-alias>
+        <ordinal>16</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Ease of biz index (1=easiest)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Business: Ease of biz index (1=easiest)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Ease of biz index (1=easiest)</remote-alias>
+        <ordinal>17</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Start-up procedures (count)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Start-up procedures (count)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Start-up procedures (count)</remote-alias>
+        <ordinal>18</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Legal rights (0=weak, 10=strong)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Legal rights (0=weak, 10=strong)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Legal rights (0=weak, 10=strong)</remote-alias>
+        <ordinal>19</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Time to start a business (days)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Time to start a business (days)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Time to start a business (days)</remote-alias>
+        <ordinal>20</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Time to prep &amp; pay taxes (hours)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Time to prep &amp; pay taxes (hours)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Time to prep &amp; pay taxes (hours)</remote-alias>
+        <ordinal>21</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Total tax rate (% of commercial profits)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Total tax rate (% of commercial profits)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Total tax rate (% of commercial profits)</remote-alias>
+        <ordinal>22</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Firing cost (weeks of wages)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Firing cost (weeks of wages)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Firing cost (weeks of wages)</remote-alias>
+        <ordinal>23</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>R&amp;D: Scientific &amp; tech articles</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[R&amp;D: Scientific &amp; tech articles]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>R&amp;D: Scientific &amp; tech articles</remote-alias>
+        <ordinal>24</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Transit: Air transport, passengers (count)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Transit: Air transport, passengers (count)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Transit: Air transport, passengers (count)</remote-alias>
+        <ordinal>25</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Transit: Railways, (million passenger-km)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Transit: Railways, (million passenger-km)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Transit: Railways, (million passenger-km)</remote-alias>
+        <ordinal>26</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Transit: Passenger cars (per 1,000 people)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Transit: Passenger cars (per 1,000 people)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Transit: Passenger cars (per 1,000 people)</remote-alias>
+        <ordinal>27</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Mobile phone subscribers</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Mobile phone subscribers]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Mobile phone subscribers</remote-alias>
+        <ordinal>28</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Internet users (per 100 people)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Internet users (per 100 people)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Internet users (per 100 people)</remote-alias>
+        <ordinal>29</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Military: Armed forces personnel</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Military: Armed forces personnel]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Military: Armed forces personnel</remote-alias>
+        <ordinal>30</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Military: Expenditure (% GDP)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Military: Expenditure (% GDP)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Military: Expenditure (% GDP)</remote-alias>
+        <ordinal>31</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Military: Expenditure (% central govt exp)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Military: Expenditure (% central govt exp)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Military: Expenditure (% central govt exp)</remote-alias>
+        <ordinal>32</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Exports (% GDP)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Exports (% GDP)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Exports (% GDP)</remote-alias>
+        <ordinal>33</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Imports (% GDP)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Imports (% GDP)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Imports (% GDP)</remote-alias>
+        <ordinal>34</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Trade (% GDP)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Trade (% GDP)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Trade (% GDP)</remote-alias>
+        <ordinal>35</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Exports (current US$)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Exports (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Exports (current US$)</remote-alias>
+        <ordinal>36</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: Imports (current US$)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Business: Imports (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: Imports (current US$)</remote-alias>
+        <ordinal>37</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Finance: GDP (current US$)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Finance: GDP (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Finance: GDP (current US$)</remote-alias>
+        <ordinal>38</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Finance: GDP per capita (current US$)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Finance: GDP per capita (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Finance: GDP per capita (current US$)</remote-alias>
+        <ordinal>39</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Finance: Net income from abroad (current LCU)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Finance: Net income from abroad (current LCU)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Finance: Net income from abroad (current LCU)</remote-alias>
+        <ordinal>40</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Government: Seats women in nat parliament (%)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Government: Seats women in nat parliament (%)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Government: Seats women in nat parliament (%)</remote-alias>
+        <ordinal>41</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Health: Mortality, under-5 (per 1,000 live births)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Health: Mortality, under-5 (per 1,000 live births)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Health: Mortality, under-5 (per 1,000 live births)</remote-alias>
+        <ordinal>42</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Health: Health expenditure per capita (current US$)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Health: Health expenditure per capita (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Health: Health expenditure per capita (current US$)</remote-alias>
+        <ordinal>43</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Health: Health expenditure, total (% GDP)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Health: Health expenditure, total (% GDP)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Health: Health expenditure, total (% GDP)</remote-alias>
+        <ordinal>44</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Population: Total (count)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Population: Total (count)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Population: Total (count)</remote-alias>
+        <ordinal>45</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Population: Urban (count)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Population: Urban (count)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Population: Urban (count)</remote-alias>
+        <ordinal>46</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Population:: Birth rate, crude (per 1,000)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Population:: Birth rate, crude (per 1,000)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Population:: Birth rate, crude (per 1,000)</remote-alias>
+        <ordinal>47</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Health: Life expectancy at birth, female (years)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Health: Life expectancy at birth, female (years)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Health: Life expectancy at birth, female (years)</remote-alias>
+        <ordinal>48</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Health: Life expectancy at birth, male (years)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Health: Life expectancy at birth, male (years)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Health: Life expectancy at birth, male (years)</remote-alias>
+        <ordinal>49</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Health: Life expectancy at birth, total (years)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Health: Life expectancy at birth, total (years)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Health: Life expectancy at birth, total (years)</remote-alias>
+        <ordinal>50</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Population: Ages 0-14 (% of total)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Population: Ages 0-14 (% of total)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Population: Ages 0-14 (% of total)</remote-alias>
+        <ordinal>51</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Population: Ages 15-64 (% of total)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Population: Ages 15-64 (% of total)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Population: Ages 15-64 (% of total)</remote-alias>
+        <ordinal>52</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Population: Ages 65+ (% of total)</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Population: Ages 65+ (% of total)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Population: Ages 65+ (% of total)</remote-alias>
+        <ordinal>53</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: International tourism inc (current US$)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Business: International tourism inc (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: International tourism inc (current US$)</remote-alias>
+        <ordinal>54</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Business: International tourism, exp (current US$)</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Business: International tourism, exp (current US$)]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Business: International tourism, exp (current US$)</remote-alias>
+        <ordinal>55</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Measures with values</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[Measures with values]</local-name>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias>Measures with values</remote-alias>
+        <ordinal>56</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='capability'>
+        <remote-name></remote-name>
+        <remote-type>0</remote-type>
+        <parent-name>[&apos;Data by country$&apos;]</parent-name>
+        <remote-alias></remote-alias>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='context'>1</attribute>
+          <attribute datatype='boolean' name='header'>true</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Region</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[&apos;Regions and subregions$&apos;_Region]</local-name>
+        <parent-name>[&apos;Regions and subregions$&apos;]</parent-name>
+        <remote-alias>Region</remote-alias>
+        <ordinal>58</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Subregion</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[&apos;Regions and subregions$&apos;_Subregion]</local-name>
+        <parent-name>[&apos;Regions and subregions$&apos;]</parent-name>
+        <remote-alias>Subregion</remote-alias>
+        <ordinal>59</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Country</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[&apos;Regions and subregions$&apos;_Country]</local-name>
+        <parent-name>[&apos;Regions and subregions$&apos;]</parent-name>
+        <remote-alias>Country</remote-alias>
+        <ordinal>60</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RUS_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='capability'>
+        <remote-name></remote-name>
+        <remote-type>0</remote-type>
+        <parent-name>[&apos;Regions and subregions$&apos;]</parent-name>
+        <remote-alias></remote-alias>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='context'>1</attribute>
+          <attribute datatype='boolean' name='header'>true</attribute>
+        </attributes>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column datatype='string' hidden='true' name='[&apos;Regions and subregions$&apos;_Country]' role='dimension' type='nominal'>
+  </column>
+  <column caption='Region' datatype='string' name='[&apos;Regions and subregions$&apos;_Region]' role='dimension' type='nominal'>
+    <aliases>
+      <alias key='%null%' value='Other' />
+    </aliases>
+  </column>
+  <column caption='Subregion' datatype='string' name='[&apos;Regions and subregions$&apos;_Subregion]' role='dimension' type='nominal'>
+  </column>
+  <column aggregation='Avg' caption='B: ATMs (per 100k adults)' datatype='real' name='[Banks: Automated tellers (per 100k adults)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Banks (per 100k adults)' datatype='real' name='[Banks: Comm branches (per 100k adults)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Export cost ($/container)' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Business: Cost to export ($ per container)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Import cost ($/container)' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Business: Cost to import ($ per container)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Ease of biz index (1=easy)' datatype='real' datatype-customized='true' name='[Business: Ease of biz index (1=easiest)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Exports (% of GDP)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Business: Exports (% GDP)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Exports (curr $)' datatype='real' default-format='c&quot;$&quot;#,##0,,,.0B;(&quot;$&quot;#,##0,,,.0B)' name='[Business: Exports (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Firing cost (weeks of pay)' datatype='real' name='[Business: Firing cost (weeks of wages)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Imports (% of GDP)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Business: Imports (% GDP)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Imports (curr $)' datatype='real' default-format='c&quot;$&quot;#,##0,,,.0B;(&quot;$&quot;#,##0,,,.0B)' name='[Business: Imports (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Int&apos;l tourism inc (curr $)' datatype='real' datatype-customized='true' default-format='c&quot;$&quot;#,##0,,,.0B;(&quot;$&quot;#,##0,,,.0B)' name='[Business: International tourism inc (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Int&apos;l tourism exp (curr $)' datatype='real' datatype-customized='true' default-format='c&quot;$&quot;#,##0,,,.0B;(&quot;$&quot;#,##0,,,.0B)' name='[Business: International tourism, exp (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Internet users (per 100)' datatype='real' name='[Business: Internet users (per 100 people)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='G: Legal rights (0=weak)' datatype='real' name='[Business: Legal rights (0=weak, 10=strong)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Mobile phone subscribers' datatype='real' name='[Business: Mobile phone subscribers]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Start-up cost (% income)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Business: Start-up proc cost (% GNI per capita)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Start-up steps (count)' datatype='real' name='[Business: Start-up procedures (count)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Hours to do taxes' datatype='real' name='[Business: Time to prep &amp; pay taxes (hours)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Days to start business' datatype='real' name='[Business: Time to start a business (days)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Biz tax rate (% profits)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Business: Total tax rate (% of commercial profits)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Trade (% GDP)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Business: Trade (% GDP)]' role='measure' type='quantitative'>
+  </column>
+  <column caption='Country / Region' datatype='string' name='[Country Name]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+    <semantic-values semantic-role='[Country].[Name]'>
+      <semantic-value key='&quot;Sint Maarten (Dutch part)&quot;' value='&quot;Saint-Martin&quot;' />
+    </semantic-values>
+  </column>
+  <column caption='Date (year)' datatype='date' datatype-customized='true' name='[Date]' role='dimension' type='ordinal'>
+  </column>
+  <column aggregation='Avg' caption='F: CPI (2005=100)' datatype='real' name='[Finance: Consumer price index (2005 = 100)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Deposit interest rate (%)' datatype='real' datatype-customized='true' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Finance: Deposit interest rate (%)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: GDP (curr $)' datatype='real' default-format='c&quot;$&quot;#,##0,,,.0B;(&quot;$&quot;#,##0,,,.0B)' name='[Finance: GDP (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: GDP per capita (curr $)' datatype='real' default-format='c&quot;$&quot;#,##0,.0K;(&quot;$&quot;#,##0,.0K)' name='[Finance: GDP per capita (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Lending interest rate (%)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Finance: Lending interest rate (%)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Net inc abroad (curr LCU)' datatype='real' default-format='c&quot;$&quot;#,##0,,.0M;(&quot;$&quot;#,##0,,.0M)' name='[Finance: Net income from abroad (current LCU)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='F: Real interest rate (%)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Finance: Real interest rate (%)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='G: Women parliament (%)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Government: Seats women in nat parliament (%)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='H: Health exp/cap (curr $)' datatype='real' default-format='c&quot;$&quot;#,##0,.0K;(&quot;$&quot;#,##0,.0K)' name='[Health: Health expenditure per capita (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='H: Health exp (% GDP)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Health: Health expenditure, total (% GDP)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='H: Life exp female (years)' datatype='real' name='[Health: Life expectancy at birth, female (years)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='H: Life exp male (years)' datatype='real' name='[Health: Life expectancy at birth, male (years)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='H: Life exp (years)' datatype='real' name='[Health: Life expectancy at birth, total (years)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='H: Infant mort/1k live births' datatype='real' name='[Health: Mortality, under-5 (per 1,000 live births)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='Count measures non-null' datatype='real' hidden='true' name='[Measures with values]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='M: Armed forces personnel' datatype='real' default-format='n#,##0,,.0M;-#,##0,,.0M' name='[Military: Armed forces personnel]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='M: Military (% GDP)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Military: Expenditure (% GDP)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='M: Military (% govt exp)' datatype='real' name='[Military: Expenditure (% central govt exp)]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column aggregation='Avg' caption='P: Pop age 0-14 (%)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Population: Ages 0-14 (% of total)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='P: Pop age 15-64 (% of total)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Population: Ages 15-64 (% of total)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='P: Pop age 65+ (% of total)' datatype='real' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Population: Ages 65+ (% of total)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='P: Population (count)' datatype='real' default-format='n#,##0,,.0M;-#,##0,,.0M' name='[Population: Total (count)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='P: Urban (count)' datatype='real' name='[Population: Urban (count)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='P: Birth rate (per 1k)' datatype='real' name='[Population:: Birth rate, crude (per 1,000)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='B: Scientific &amp; tech articles' datatype='real' name='[R&amp;D: Scientific &amp; tech articles]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='S: Domestic companies' datatype='real' datatype-customized='true' name='[Stock: Listed domestic companies (count)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='S: Market cap (curr $)' datatype='real' datatype-customized='true' default-format='c&quot;$&quot;#,##0,,,.0B;(&quot;$&quot;#,##0,,,.0B)' name='[Stock: Market cap companies (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='S: Market cap (% GDP)' datatype='real' datatype-customized='true' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Stock: Market cap of companies (% GDP)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='S: Traded value (% GDP)' datatype='real' datatype-customized='true' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Stock: Traded, total value (% GDP)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='S: Traded value (current $)' datatype='real' datatype-customized='true' default-format='c&quot;$&quot;#,##0,,,.0B;(&quot;$&quot;#,##0,,,.0B)' name='[Stock: Traded, total value (current US$)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='S: Traded turnover (%)' datatype='real' datatype-customized='true' default-format='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' name='[Stock: Traded, turnover ratio (%)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='T: Air passengers (count)' datatype='real' default-format='n#,##0,,.0M;-#,##0,,.0M' name='[Transit: Air transport, passengers (count)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='T: Passenger cars (per 1k)' datatype='real' name='[Transit: Passenger cars (per 1,000 people)]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' caption='T: Rail (million pass km)' datatype='real' datatype-customized='true' name='[Transit: Railways, (million passenger-km)]' role='measure' type='quantitative'>
+  </column>
+  <column-instance column='[Country Name]' derivation='None' name='[none:Country Name:nk]' pivot='key' type='nominal' />
+  <column-instance column='[Date]' derivation='Year-Trunc' name='[tyr:Date:qk]' pivot='key' type='quantitative' />
+  <group hidden='true' name='[[Exclusions (Country Name,YEAR(Date (year)))]]]' name-style='unqualified' user:auto-column='exclude'>
+    <groupfilter function='crossjoin'>
+      <groupfilter function='level-members' level='[none:Country Name:nk]' />
+      <groupfilter function='level-members' level='[tyr:Date:qk]' />
+    </groupfilter>
+  </group>
+  <folder name='Business related' role='measures'>
+    <folder-item name='[Banks: Automated tellers (per 100k adults)]' type='field' />
+    <folder-item name='[Banks: Comm branches (per 100k adults)]' type='field' />
+    <folder-item name='[Business: Cost to export ($ per container)]' type='field' />
+    <folder-item name='[Business: Cost to import ($ per container)]' type='field' />
+    <folder-item name='[Business: Ease of biz index (1=easiest)]' type='field' />
+    <folder-item name='[Business: Firing cost (weeks of wages)]' type='field' />
+    <folder-item name='[Business: Internet users (per 100 people)]' type='field' />
+    <folder-item name='[Business: Mobile phone subscribers]' type='field' />
+    <folder-item name='[Business: Start-up proc cost (% GNI per capita)]' type='field' />
+    <folder-item name='[Business: Start-up procedures (count)]' type='field' />
+    <folder-item name='[Business: Time to prep &amp; pay taxes (hours)]' type='field' />
+    <folder-item name='[Business: Time to start a business (days)]' type='field' />
+    <folder-item name='[Business: Total tax rate (% of commercial profits)]' type='field' />
+    <folder-item name='[Business: Trade (% GDP)]' type='field' />
+    <folder-item name='[R&amp;D: Scientific &amp; tech articles]' type='field' />
+  </folder>
+  <folder name='Finance related' role='measures'>
+    <folder-item name='[Business: Exports (% GDP)]' type='field' />
+    <folder-item name='[Business: Exports (current US$)]' type='field' />
+    <folder-item name='[Business: Imports (% GDP)]' type='field' />
+    <folder-item name='[Business: Imports (current US$)]' type='field' />
+    <folder-item name='[Business: International tourism inc (current US$)]' type='field' />
+    <folder-item name='[Business: International tourism, exp (current US$)]' type='field' />
+    <folder-item name='[Finance: Consumer price index (2005 = 100)]' type='field' />
+    <folder-item name='[Finance: Deposit interest rate (%)]' type='field' />
+    <folder-item name='[Finance: GDP (current US$)]' type='field' />
+    <folder-item name='[Finance: GDP per capita (current US$)]' type='field' />
+    <folder-item name='[Finance: Lending interest rate (%)]' type='field' />
+    <folder-item name='[Finance: Net income from abroad (current LCU)]' type='field' />
+    <folder-item name='[Finance: Real interest rate (%)]' type='field' />
+  </folder>
+  <folder name='Health related' role='measures'>
+    <folder-item name='[Health: Health expenditure per capita (current US$)]' type='field' />
+    <folder-item name='[Health: Health expenditure, total (% GDP)]' type='field' />
+    <folder-item name='[Health: Life expectancy at birth, female (years)]' type='field' />
+    <folder-item name='[Health: Life expectancy at birth, male (years)]' type='field' />
+    <folder-item name='[Health: Life expectancy at birth, total (years)]' type='field' />
+    <folder-item name='[Health: Mortality, under-5 (per 1,000 live births)]' type='field' />
+  </folder>
+  <folder name='Military &amp; Government related' role='measures'>
+    <folder-item name='[Business: Legal rights (0=weak, 10=strong)]' type='field' />
+    <folder-item name='[Government: Seats women in nat parliament (%)]' type='field' />
+    <folder-item name='[Military: Armed forces personnel]' type='field' />
+    <folder-item name='[Military: Expenditure (% GDP)]' type='field' />
+    <folder-item name='[Military: Expenditure (% central govt exp)]' type='field' />
+  </folder>
+  <folder name='Population related' role='measures'>
+    <folder-item name='[Population: Ages 0-14 (% of total)]' type='field' />
+    <folder-item name='[Population: Ages 15-64 (% of total)]' type='field' />
+    <folder-item name='[Population: Ages 65+ (% of total)]' type='field' />
+    <folder-item name='[Population: Total (count)]' type='field' />
+    <folder-item name='[Population: Urban (count)]' type='field' />
+    <folder-item name='[Population:: Birth rate, crude (per 1,000)]' type='field' />
+  </folder>
+  <folder name='Stock Market related' role='measures'>
+    <folder-item name='[Stock: Listed domestic companies (count)]' type='field' />
+    <folder-item name='[Stock: Market cap companies (current US$)]' type='field' />
+    <folder-item name='[Stock: Market cap of companies (% GDP)]' type='field' />
+    <folder-item name='[Stock: Traded, total value (% GDP)]' type='field' />
+    <folder-item name='[Stock: Traded, total value (current US$)]' type='field' />
+    <folder-item name='[Stock: Traded, turnover ratio (%)]' type='field' />
+  </folder>
+  <folder name='Travel related' role='measures'>
+    <folder-item name='[Transit: Air transport, passengers (count)]' type='field' />
+    <folder-item name='[Transit: Passenger cars (per 1,000 people)]' type='field' />
+    <folder-item name='[Transit: Railways, (million passenger-km)]' type='field' />
+  </folder>
+  <layout dim-ordering='alphabetic' dim-percentage='0.249042' measure-ordering='alphabetic' measure-percentage='0.750958' show-structure='false' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+</datasource>

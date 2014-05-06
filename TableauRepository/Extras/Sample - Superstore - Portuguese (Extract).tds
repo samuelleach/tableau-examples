@@ -1,0 +1,942 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource formatted-name='Sample - Superstore - Portuguese (Extract)' inline='true' version='8.2' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8100.13.0916.2000                -->
+  <connection class='dataengine' dbname='..\Datasources\Sample - Superstore Sales Multi-language (Extract).tde' schema='Extract' tablename='Extract'>
+    <relation name='Extract' table='[Extract].[Extract]' type='table' />
+    <calculations>
+      <calculation column='[Number of Records]' formula='1' />
+    </calculations>
+  </connection>
+  <aliases enabled='yes' />
+  <column datatype='string' hidden='true' name='[Bestellpriorität]' role='dimension' type='nominal'>
+  </column>
+  <column caption='Gross profit ratio' datatype='real' default-format='p0.0%' name='[Calculation_9100813121824802]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='SUM([Profit])/SUM([Sales])' />
+  </column>
+  <column datatype='string' hidden='true' name='[Categoria do produto]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Catégorie de produit]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+  </column>
+  <column datatype='string' name='[Continent]' role='dimension' type='nominal'>
+  </column>
+  <column caption='Country / Region' datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+  </column>
+  <column datatype='real' hidden='true' name='[Cust % rank]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' hidden='true' name='[Customer LTV]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' name='[Customer Name]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Customer Segment]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='real' hidden='true' name='[Days as customer]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Avg' datatype='real' default-format='p0.0%' name='[Discount]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' hidden='true' name='[Embalagem do produto]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Emballage du produit]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Kundensegment]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Mode d&apos;expédition]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Modo de envío]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='real' hidden='true' name='[New Year]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column datatype='string' hidden='true' name='[Ordenar prioridad]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='date' datatype-customized='true' name='[Order Date]' role='dimension' type='ordinal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Order Priority]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='real' hidden='true' name='[Order Quantity]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' hidden='true' name='[Order amount percentile]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Priorité de commande]' role='dimension' type='nominal'>
+  </column>
+  <column aggregation='Avg' datatype='real' default-format='p0.0%' name='[Product Base Margin]' role='measure' type='quantitative'>
+  </column>
+  <column caption='Department' datatype='string' hidden='true' name='[Product Category]' role='dimension' type='nominal'>
+  </column>
+  <column caption='Container' datatype='string' hidden='true' name='[Product Container]' role='dimension' type='nominal'>
+  </column>
+  <column caption='Item' datatype='string' name='[Product Name]' role='dimension' type='nominal'>
+    <desc>
+      <formatted-text>
+        <run>We don&apos;t translate this field</run>
+      </formatted-text>
+    </desc>
+  </column>
+  <column caption='Category' datatype='string' hidden='true' name='[Product Sub-Category]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Produkt-Subkategorie]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Produktkategorie]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Produktverpackung]' role='dimension' type='nominal'>
+  </column>
+  <column caption='Profit (bin)' datatype='integer' name='[Profit (bin)]' role='dimension' type='ordinal'>
+    <calculation class='bin' decimals='0' formula='[Profit]' peg='0' size-parameter='[Parameters].[Parameter 1]' />
+  </column>
+  <column datatype='real' hidden='true' name='[Profit factor]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0.00;(&quot;$&quot;#,##0.00)' name='[Profit]' role='measure' type='quantitative'>
+  </column>
+  <column caption='Order quantity' datatype='real' name='[Quantity ordered new]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' hidden='true' name='[RAND]' role='measure' type='quantitative'>
+  </column>
+  <column aggregation='Sum' datatype='real' hidden='true' name='[Row ID]' role='dimension' type='ordinal'>
+  </column>
+  <column datatype='real' hidden='true' name='[Sales factor]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0.00;(&quot;$&quot;#,##0.00)' name='[Sales]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' hidden='true' name='[Segment client]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Segmento do cliente]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='date' datatype-customized='true' name='[Ship Date]' role='dimension' type='ordinal'>
+  </column>
+  <column datatype='string' hidden='true' name='[Ship Mode]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='real' default-format='c&quot;$&quot;#,##0.00;(&quot;$&quot;#,##0.00)' name='[Shipping Cost]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' hidden='true' name='[Sous-catégorie de produit]' role='dimension' type='nominal'>
+  </column>
+  <column caption='State' datatype='string' name='[State or Province]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+    <aliases>
+      <alias key='&quot;Préfecture d&apos;Aichi&quot;' value='Aichi' />
+    </aliases>  
+  </column>
+  <column datatype='string' hidden='true' name='[Subcategoria do produto]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' name='[Supplier]' role='dimension' type='nominal'>
+    <calculation class='categorical-bin' column='[Product Name]' default='&quot;Zoom V.92 V.44 PCI Internal Controllerless FaxModem&quot;'>
+      <bin value='&quot;*Staples* Highlighting Markers&quot;'>
+        <value>&quot;*Staples* Highlighting Markers&quot;</value>
+        <value>&quot;*Staples* Letter Opener&quot;</value>
+        <value>&quot;*Staples* Packaging Labels&quot;</value>
+        <value>&quot;*Staples* vLetter Openers, 2/Pack&quot;</value>
+      </bin>
+      <bin value='&quot;3M Hangers With Command Adhesive&quot;'>
+        <value>&quot;3M Hangers With Command Adhesive&quot;</value>
+        <value>&quot;3M Office Air Cleaner&quot;</value>
+        <value>&quot;3M Organizer Strips&quot;</value>
+        <value>&quot;3M Polarizing Light Filter Sleeves&quot;</value>
+        <value>&quot;3M Polarizing Task Lamp with Clamp Arm, Light Gray&quot;</value>
+      </bin>
+      <bin value='&quot;Acco 3-Hole Punch&quot;'>
+        <value>&quot;Acco 3-Hole Punch&quot;</value>
+        <value>&quot;Acco 6 Outlet Guardian Premium Surge Suppressor&quot;</value>
+        <value>&quot;Acco Clips to Go™ Binder Clips, 24 Clips in Two Sizes&quot;</value>
+        <value>&quot;Acco D-Ring Binder w/DublLock®&quot;</value>
+        <value>&quot;Acco Four Pocket Poly Ring Binder with Label Holder, Smoke, 1\&quot;&quot;</value>
+        <value>&quot;Acco Keyboard-In-A-Box®&quot;</value>
+        <value>&quot;Acco Perma® 2700 Stacking Storage Drawers&quot;</value>
+        <value>&quot;Acco Perma® 3000 Stacking Storage Drawers&quot;</value>
+        <value>&quot;Acco Pressboard Covers with Storage Hooks, 14 7/8\&quot; x 11\&quot;, Dark Blue&quot;</value>
+        <value>&quot;Acco Pressboard Covers with Storage Hooks, 14 7/8\&quot; x 11\&quot;, Executive Red&quot;</value>
+        <value>&quot;Acco Pressboard Covers with Storage Hooks, 14 7/8\&quot; x 11\&quot;, Light Blue&quot;</value>
+        <value>&quot;Acco PRESSTEX® Data Binder with Storage Hooks, Dark Blue, 14 7/8\&quot; X 11\&quot;&quot;</value>
+        <value>&quot;Acco PRESSTEX® Data Binder with Storage Hooks, Dark Blue, 9 1/2\&quot; X 11\&quot;&quot;</value>
+        <value>&quot;Acco Recycled 2\&quot; Capacity Laser Printer Hanging Data Binders&quot;</value>
+        <value>&quot;Acco Six-Outlet Power Strip, 4&apos; Cord Length&quot;</value>
+        <value>&quot;Acco Smartsocket® Color-Coded Six-Outlet AC Adapter Model Surge Protectors&quot;</value>
+        <value>&quot;Acco Smartsocket™ Table Surge Protector, 6 Color-Coded Adapter Outlets&quot;</value>
+        <value>&quot;Acco Suede Grain Vinyl Round Ring Binder&quot;</value>
+        <value>&quot;Acco® Hot Clips™ Clips to Go&quot;</value>
+        <value>&quot;Accohide Poly Flexible Ring Binders&quot;</value>
+        <value>&quot;ACCOHIDE® 3-Ring Binder, Blue, 1\&quot;&quot;</value>
+        <value>&quot;ACCOHIDE® Binder by Acco&quot;</value>
+      </bin>
+      <bin value='&quot;Acme Design Line 8\&quot; Stainless Steel Bent Scissors w/Champagne Handles, 3-1/8\&quot; Cut&quot;'>
+        <value>&quot;Acme Design Line 8\&quot; Stainless Steel Bent Scissors w/Champagne Handles, 3-1/8\&quot; Cut&quot;</value>
+        <value>&quot;Acme Galleria® Hot Forged Steel Scissors with Colored Handles&quot;</value>
+        <value>&quot;Acme Hot Forged Carbon Steel Scissors with Nickel-Plated Handles, 3 7/8\&quot; Cut, 8\&quot;L&quot;</value>
+        <value>&quot;Acme Kleencut® Forged Steel Scissors&quot;</value>
+        <value>&quot;Acme® 8\&quot; Straight Scissors&quot;</value>
+        <value>&quot;Acme® Box Cutter Scissors&quot;</value>
+        <value>&quot;Acme® Design Stainless Steel Bent Scissors&quot;</value>
+        <value>&quot;Acme® Elite Stainless Steel Scissors&quot;</value>
+        <value>&quot;Acme® Forged Steel Scissors with Black Enamel Handles&quot;</value>
+        <value>&quot;Acme® Office Executive Series Stainless Steel Trimmers&quot;</value>
+        <value>&quot;Acme® Preferred Stainless Steel Scissors&quot;</value>
+      </bin>
+      <bin value='&quot;Avery 05222 Permanent Self-Adhesive File Folder Labels for Typewriters, on Rolls, White, 250/Roll&quot;'>
+        <value>&quot;Avery 05222 Permanent Self-Adhesive File Folder Labels for Typewriters, on Rolls, White, 250/Roll&quot;</value>
+        <value>&quot;Avery 4027 File Folder Labels for Dot Matrix Printers, 5000 Labels per Box, White&quot;</value>
+        <value>&quot;Avery 474&quot;</value>
+        <value>&quot;Avery 478&quot;</value>
+        <value>&quot;Avery 479&quot;</value>
+        <value>&quot;Avery 48&quot;</value>
+        <value>&quot;Avery 481&quot;</value>
+        <value>&quot;Avery 482&quot;</value>
+        <value>&quot;Avery 484&quot;</value>
+        <value>&quot;Avery 485&quot;</value>
+        <value>&quot;Avery 487&quot;</value>
+        <value>&quot;Avery 49&quot;</value>
+        <value>&quot;Avery 491&quot;</value>
+        <value>&quot;Avery 492&quot;</value>
+        <value>&quot;Avery 493&quot;</value>
+        <value>&quot;Avery 494&quot;</value>
+        <value>&quot;Avery 496&quot;</value>
+        <value>&quot;Avery 497&quot;</value>
+        <value>&quot;Avery 498&quot;</value>
+        <value>&quot;Avery 501&quot;</value>
+        <value>&quot;Avery 503&quot;</value>
+        <value>&quot;Avery 504&quot;</value>
+        <value>&quot;Avery 506&quot;</value>
+        <value>&quot;Avery 507&quot;</value>
+        <value>&quot;Avery 508&quot;</value>
+        <value>&quot;Avery 51&quot;</value>
+        <value>&quot;Avery 510&quot;</value>
+        <value>&quot;Avery 511&quot;</value>
+        <value>&quot;Avery 514&quot;</value>
+        <value>&quot;Avery 516&quot;</value>
+        <value>&quot;Avery 52&quot;</value>
+        <value>&quot;Avery 520&quot;</value>
+        <value>&quot;Avery Arch Ring Binders&quot;</value>
+        <value>&quot;Avery Binder Labels&quot;</value>
+        <value>&quot;Avery Binding System Hidden Tab™ Executive Style Index Sets&quot;</value>
+        <value>&quot;Avery Durable Binders&quot;</value>
+        <value>&quot;Avery Durable Poly Binders&quot;</value>
+        <value>&quot;Avery File Folder Labels&quot;</value>
+        <value>&quot;Avery Flip-Chart Easel Binder, Black&quot;</value>
+        <value>&quot;Avery Hanging File Binders&quot;</value>
+        <value>&quot;Avery Heavy-Duty EZD ™ Binder With Locking Rings&quot;</value>
+        <value>&quot;Avery Hi-Liter Comfort Grip Fluorescent Highlighter, Yellow Ink&quot;</value>
+        <value>&quot;Avery Hi-Liter GlideStik Fluorescent Highlighter, Yellow Ink&quot;</value>
+        <value>&quot;Avery Hi-Liter Pen Style Six-Color Fluorescent Set&quot;</value>
+        <value>&quot;Avery Hi-Liter® EverBold™ Pen Style Fluorescent Highlighters, 4/Pack&quot;</value>
+        <value>&quot;Avery Hi-Liter® Fluorescent Desk Style Markers&quot;</value>
+        <value>&quot;Avery Hi-Liter® Smear-Safe Highlighters&quot;</value>
+        <value>&quot;Avery Hole Reinforcements&quot;</value>
+        <value>&quot;Avery Legal 4-Ring Binder&quot;</value>
+        <value>&quot;Avery Non-Stick Binders&quot;</value>
+        <value>&quot;Avery Poly Binder Pockets&quot;</value>
+        <value>&quot;Avery Premier Heavy-Duty Binder with Round Locking Rings&quot;</value>
+        <value>&quot;Avery Printable Repositionable Plastic Tabs&quot;</value>
+        <value>&quot;Avery Reinforcements for Hole-Punch Pages&quot;</value>
+        <value>&quot;Avery Round Ring Poly Binders&quot;</value>
+        <value>&quot;Avery Self-Adhesive Photo Pockets for Polaroid Photos&quot;</value>
+        <value>&quot;Avery Trapezoid Extra Heavy Duty 4\&quot; Binders&quot;</value>
+        <value>&quot;Avery Trapezoid Ring Binder, 3\&quot; Capacity, Black, 1040 sheets&quot;</value>
+        <value>&quot;Avery White Multi-Purpose Labels&quot;</value>
+        <value>&quot;Avery® 3 1/2\&quot; Diskette Storage Pages, 10/Pack&quot;</value>
+        <value>&quot;Avery® Durable Plastic 1\&quot; Binders&quot;</value>
+        <value>&quot;Avery® Durable Slant Ring Binders With Label Holder&quot;</value>
+      </bin>
+      <bin value='&quot;Belkin 105-Key Black Keyboard&quot;'>
+        <value>&quot;Belkin 105-Key Black Keyboard&quot;</value>
+        <value>&quot;Belkin 107-key enhanced keyboard, USB/PS/2 interface&quot;</value>
+        <value>&quot;Belkin 325VA UPS Surge Protector, 6&apos;&quot;</value>
+        <value>&quot;Belkin 5 Outlet SurgeMaster™ Power Centers&quot;</value>
+        <value>&quot;Belkin 6 Outlet Metallic Surge Strip&quot;</value>
+        <value>&quot;Belkin 7 Outlet SurgeMaster Surge Protector with Phone Protection&quot;</value>
+        <value>&quot;Belkin 8 Outlet Surge Protector&quot;</value>
+        <value>&quot;Belkin 8 Outlet SurgeMaster II Gold Surge Protector&quot;</value>
+        <value>&quot;Belkin 8 Outlet SurgeMaster II Gold Surge Protector with Phone Protection&quot;</value>
+        <value>&quot;Belkin ErgoBoard™ Keyboard&quot;</value>
+        <value>&quot;Belkin F5C206VTEL 6 Outlet Surge&quot;</value>
+        <value>&quot;Belkin F9M820V08 8 Outlet Surge&quot;</value>
+        <value>&quot;Belkin MediaBoard 104- Keyboard&quot;</value>
+        <value>&quot;Belkin OmniView SE Rackmount Kit&quot;</value>
+        <value>&quot;Belkin Premiere Surge Master II 8-outlet surge protector&quot;</value>
+      </bin>
+      <bin value='&quot;Boston 1645 Deluxe Heavier-Duty Electric Pencil Sharpener&quot;'>
+        <value>&quot;Boston 1645 Deluxe Heavier-Duty Electric Pencil Sharpener&quot;</value>
+        <value>&quot;Boston 16701 Slimline Battery Pencil Sharpener&quot;</value>
+        <value>&quot;Boston 16765 Mini Stand Up Battery Pencil Sharpener&quot;</value>
+        <value>&quot;Boston 16801 Nautilus™ Battery Pencil Sharpener&quot;</value>
+        <value>&quot;Boston 1730 StandUp Electric Pencil Sharpener&quot;</value>
+        <value>&quot;Boston 1799 Powerhouse™ Electric Pencil Sharpener&quot;</value>
+        <value>&quot;Boston 19500 Mighty Mite Electric Pencil Sharpener&quot;</value>
+        <value>&quot;Boston Electric Pencil Sharpener, Model 1818, Charcoal Black&quot;</value>
+        <value>&quot;Boston KS Multi-Size Manual Pencil Sharpener&quot;</value>
+        <value>&quot;Boston Model 1800 Electric Pencil Sharpener, Gray&quot;</value>
+        <value>&quot;Boston School Pro Electric Pencil Sharpener, 1670&quot;</value>
+        <value>&quot;BOSTON® Ranger® \#55 Pencil Sharpener, Black&quot;</value>
+      </bin>
+      <bin value='&quot;Canon BP1200DH 12-Digit Bubble Jet Printing Calculator&quot;'>
+        <value>&quot;Canon BP1200DH 12-Digit Bubble Jet Printing Calculator&quot;</value>
+        <value>&quot;Canon F603 Scientific Calculator&quot;</value>
+        <value>&quot;Canon Image Class D660 Copier&quot;</value>
+        <value>&quot;Canon imageCLASS 2200 Advanced Copier&quot;</value>
+        <value>&quot;Canon Imageclass D680 Copier / Fax&quot;</value>
+        <value>&quot;Canon MP100DHII Printing Calculator&quot;</value>
+        <value>&quot;Canon MP25DIII Desktop Whisper-Quiet Printing Calculator&quot;</value>
+        <value>&quot;Canon MP41DH Printing Calculator&quot;</value>
+        <value>&quot;Canon P1-DHIII Palm Printing Calculator&quot;</value>
+        <value>&quot;Canon PC-428 Personal Copier&quot;</value>
+        <value>&quot;Canon PC1060 Personal Laser Copier&quot;</value>
+        <value>&quot;Canon PC1080F Personal Copier&quot;</value>
+        <value>&quot;Canon PC940 Copier&quot;</value>
+        <value>&quot;Canon S750 Color Inkjet Printer&quot;</value>
+      </bin>
+      <bin value='&quot;Eldon Advantage® Chair Mats for Low to Medium Pile Carpets&quot;'>
+        <value>&quot;Eldon Advantage® Chair Mats for Low to Medium Pile Carpets&quot;</value>
+        <value>&quot;Eldon Advantage® Foldable Chair Mats for Low Pile Carpets&quot;</value>
+        <value>&quot;Eldon Antistatic Chair Mats for Low to Medium Pile Carpets&quot;</value>
+        <value>&quot;Eldon Base for stackable storage shelf, platinum&quot;</value>
+        <value>&quot;Eldon Cleatmat Plus™ Chair Mats for High Pile Carpets&quot;</value>
+        <value>&quot;Eldon Cleatmat® Chair Mats for Medium Pile Carpets&quot;</value>
+        <value>&quot;Eldon ClusterMat Chair Mat with Cordless Antistatic Protection&quot;</value>
+        <value>&quot;Eldon Delta Triangular Chair Mat, 52\&quot; x 58\&quot;, Clear&quot;</value>
+        <value>&quot;Eldon Econocleat® Chair Mats for Low Pile Carpets&quot;</value>
+        <value>&quot;Eldon Executive Woodline II Cherry Finish Desk Accessories&quot;</value>
+        <value>&quot;Eldon Expressions Mahogany Wood Desk Collection&quot;</value>
+        <value>&quot;Eldon Expressions Punched Metal &amp; Wood Desk Accessories, Black &amp; Cherry&quot;</value>
+        <value>&quot;Eldon Expressions Punched Metal &amp; Wood Desk Accessories, Pewter &amp; Cherry&quot;</value>
+        <value>&quot;Eldon Expressions™ Desk Accessory, Wood Pencil Holder, Oak&quot;</value>
+        <value>&quot;Eldon Expressions™ Desk Accessory, Wood Photo Frame, Mahogany&quot;</value>
+        <value>&quot;Eldon Image Series Black Desk Accessories&quot;</value>
+        <value>&quot;Eldon Imàge® Series Desk Accessories, Clear&quot;</value>
+        <value>&quot;Eldon Jumbo ProFile™ Portable File Boxes Graphite/Black&quot;</value>
+        <value>&quot;Eldon Pizzaz™ Desk Accessories&quot;</value>
+        <value>&quot;Eldon Portable Mobile Manager&quot;</value>
+        <value>&quot;Eldon Radial Chair Mat for Low to Medium Pile Carpets&quot;</value>
+        <value>&quot;Eldon Regeneration Recycled Desk Accessories, Smoke&quot;</value>
+        <value>&quot;Eldon Shelf Savers™ Cubes and Bins&quot;</value>
+        <value>&quot;Eldon Simplefile® Box Office®&quot;</value>
+        <value>&quot;Eldon Spacemaker® Box, Quick-Snap Lid, Clear&quot;</value>
+        <value>&quot;Eldon Wave Desk Accessories&quot;</value>
+        <value>&quot;Eldon® 200 Class™ Desk Accessories&quot;</value>
+        <value>&quot;Eldon® 200 Class™ Desk Accessories, Burgundy&quot;</value>
+        <value>&quot;Eldon® 300 Class™ Desk Accessories, Black&quot;</value>
+        <value>&quot;Eldon® 400 Class™ Desk Accessories, Black Carbon&quot;</value>
+        <value>&quot;Eldon® 500 Class™ Desk Accessories&quot;</value>
+        <value>&quot;Eldon® Executive Woodline II Desk Accessories, Mahogany&quot;</value>
+        <value>&quot;Eldon® Expressions™ Wood and Plastic Desk Accessories, Oak&quot;</value>
+        <value>&quot;Eldon® Expressions™ Wood Desk Accessories, Oak&quot;</value>
+        <value>&quot;Eldon® Gobal File Keepers&quot;</value>
+        <value>&quot;Eldon® Image Series Desk Accessories, Burgundy&quot;</value>
+        <value>&quot;Eldon® Wave Desk Accessories&quot;</value>
+      </bin>
+      <bin value='&quot;Epson C62 Color Inkjet Printer&quot;'>
+        <value>&quot;Epson C62 Color Inkjet Printer&quot;</value>
+        <value>&quot;Epson C82 Color Inkjet Printer&quot;</value>
+        <value>&quot;Epson DFX-8500 Dot Matrix Printer&quot;</value>
+        <value>&quot;Epson DFX5000+ Dot Matrix Printer&quot;</value>
+        <value>&quot;Epson FX-2180 Wide Format Dot Matrix Printer&quot;</value>
+        <value>&quot;Epson FX-980 Dot Matrix Printer&quot;</value>
+        <value>&quot;Epson LQ-570e Dot Matrix Printer&quot;</value>
+        <value>&quot;Epson LQ-870 Dot Matrix Printer&quot;</value>
+        <value>&quot;Epson Stylus 1520 Color Inkjet Printer&quot;</value>
+      </bin>
+      <bin value='&quot;Fellowes 17-key keypad for PS/2 interface&quot;'>
+        <value>&quot;Fellowes 17-key keypad for PS/2 interface&quot;</value>
+        <value>&quot;Fellowes 8 Outlet Superior Workstation Surge Protector&quot;</value>
+        <value>&quot;Fellowes 8 Outlet Superior Workstation Surge Protector w/o Phone/Fax/Modem Protection&quot;</value>
+        <value>&quot;Fellowes Bankers Box™ Staxonsteel® Drawer File/Stacking System&quot;</value>
+        <value>&quot;Fellowes Bankers Box™ Stor/Drawer® Steel Plus™&quot;</value>
+        <value>&quot;Fellowes Bases and Tops For Staxonsteel®/High-Stak® Systems&quot;</value>
+        <value>&quot;Fellowes Basic 104-Key Keyboard, Platinum&quot;</value>
+        <value>&quot;Fellowes Binding Cases&quot;</value>
+        <value>&quot;Fellowes Black Plastic Comb Bindings&quot;</value>
+        <value>&quot;Fellowes Command Center 5-outlet power strip&quot;</value>
+        <value>&quot;Fellowes EZ Multi-Media Keyboard&quot;</value>
+        <value>&quot;Fellowes High-Stak® Drawer Files&quot;</value>
+        <value>&quot;Fellowes Internet Keyboard, Platinum&quot;</value>
+        <value>&quot;Fellowes Mighty 8 Compact Surge Protector&quot;</value>
+        <value>&quot;Fellowes Mobile File Cart, Black&quot;</value>
+        <value>&quot;Fellowes Mobile Numeric Keypad, Graphite&quot;</value>
+        <value>&quot;Fellowes Neat Ideas® Storage Cubes&quot;</value>
+        <value>&quot;Fellowes Officeware™ Wire Shelving&quot;</value>
+        <value>&quot;Fellowes PB300 Plastic Comb Binding Machine&quot;</value>
+        <value>&quot;Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind&quot;</value>
+        <value>&quot;Fellowes Personal Hanging Folder Files, Navy&quot;</value>
+        <value>&quot;Fellowes Premier Superior Surge Suppressor, 10-Outlet, With Phone and Remote&quot;</value>
+        <value>&quot;Fellowes Recycled Storage Drawers&quot;</value>
+        <value>&quot;Fellowes Smart Design 104-Key Enhanced Keyboard, PS/2 Adapter, Platinum&quot;</value>
+        <value>&quot;Fellowes Smart Surge Ten-Outlet Protector, Platinum&quot;</value>
+        <value>&quot;Fellowes Staxonsteel® Drawer Files&quot;</value>
+        <value>&quot;Fellowes Stor/Drawer® Steel Plus™ Storage Drawers&quot;</value>
+        <value>&quot;Fellowes Strictly Business® Drawer File, Letter/Legal Size&quot;</value>
+        <value>&quot;Fellowes Super Stor/Drawer®&quot;</value>
+        <value>&quot;Fellowes Super Stor/Drawer® Files&quot;</value>
+        <value>&quot;Fellowes Superior 10 Outlet Split Surge Protector&quot;</value>
+        <value>&quot;Fellowes Twister Kit, Gray/Clear, 3/pkg&quot;</value>
+      </bin>
+      <bin value='&quot;Hon 2090 “Pillow Soft” Series Mid Back Swivel/Tilt Chairs&quot;'>
+        <value>&quot;Hon 2090 “Pillow Soft” Series Mid Back Swivel/Tilt Chairs&quot;</value>
+        <value>&quot;Hon 2111 Invitation™ Series Corner Table&quot;</value>
+        <value>&quot;Hon 4-Shelf Metal Bookcases&quot;</value>
+        <value>&quot;Hon 4060 Series Tables&quot;</value>
+        <value>&quot;Hon 4070 Series Pagoda™ Armless Upholstered Stacking Chairs&quot;</value>
+        <value>&quot;Hon 4070 Series Pagoda™ Round Back Stacking Chairs&quot;</value>
+        <value>&quot;Hon 4700 Series Mobuis™ Mid-Back Task Chairs with Adjustable Arms&quot;</value>
+        <value>&quot;Hon 5100 Series Wood Tables&quot;</value>
+        <value>&quot;Hon 61000 Series Interactive Training Tables&quot;</value>
+        <value>&quot;Hon 94000 Series Round Tables&quot;</value>
+        <value>&quot;Hon Comfortask® Task/Swivel Chairs&quot;</value>
+        <value>&quot;Hon Deluxe Fabric Upholstered Stacking Chairs&quot;</value>
+        <value>&quot;Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded Back&quot;</value>
+        <value>&quot;Hon Every-Day® Chair Series Swivel Task Chairs&quot;</value>
+        <value>&quot;Hon GuestStacker Chair&quot;</value>
+        <value>&quot;Hon iLevel™ Computer Training Table&quot;</value>
+        <value>&quot;Hon Metal Bookcases, Black&quot;</value>
+        <value>&quot;Hon Metal Bookcases, Putty&quot;</value>
+        <value>&quot;Hon Multipurpose Stacking Arm Chairs&quot;</value>
+        <value>&quot;Hon Non-Folding Utility Tables&quot;</value>
+        <value>&quot;Hon Olson Stacker Stools&quot;</value>
+        <value>&quot;Hon Pagoda™ Stacking Chairs&quot;</value>
+        <value>&quot;Hon Rectangular Conference Tables&quot;</value>
+        <value>&quot;Hon Valutask™ Swivel Chairs&quot;</value>
+      </bin>
+      <bin value='&quot;Newell 307&quot;'>
+        <value>&quot;Newell 307&quot;</value>
+        <value>&quot;Newell 308&quot;</value>
+        <value>&quot;Newell 309&quot;</value>
+        <value>&quot;Newell 31&quot;</value>
+        <value>&quot;Newell 310&quot;</value>
+        <value>&quot;Newell 312&quot;</value>
+        <value>&quot;Newell 314&quot;</value>
+        <value>&quot;Newell 315&quot;</value>
+        <value>&quot;Newell 318&quot;</value>
+        <value>&quot;Newell 320&quot;</value>
+        <value>&quot;Newell 321&quot;</value>
+        <value>&quot;Newell 323&quot;</value>
+        <value>&quot;Newell 325&quot;</value>
+        <value>&quot;Newell 326&quot;</value>
+        <value>&quot;Newell 327&quot;</value>
+        <value>&quot;Newell 329&quot;</value>
+        <value>&quot;Newell 332&quot;</value>
+        <value>&quot;Newell 333&quot;</value>
+        <value>&quot;Newell 335&quot;</value>
+        <value>&quot;Newell 336&quot;</value>
+        <value>&quot;Newell 337&quot;</value>
+        <value>&quot;Newell 338&quot;</value>
+        <value>&quot;Newell 339&quot;</value>
+        <value>&quot;Newell 340&quot;</value>
+        <value>&quot;Newell 342&quot;</value>
+        <value>&quot;Newell 343&quot;</value>
+        <value>&quot;Newell 346&quot;</value>
+        <value>&quot;Newell 35&quot;</value>
+        <value>&quot;Newell 351&quot;</value>
+        <value>&quot;Newell® 3-Hole Punched Plastic Slotted Magazine Holders for Binders&quot;</value>
+      </bin>
+      <bin value='&quot;Sony IBM Color Diskettes, 25/Pack&quot;'>
+        <value>&quot;Sony IBM Color Diskettes, 25/Pack&quot;</value>
+        <value>&quot;Sony MFD2HD Formatted Diskettes, 10/Pack&quot;</value>
+      </bin>
+      <bin value='&quot;Wilson Jones “Snap” Scratch Pad Binder Tool for Ring Binders&quot;'>
+        <value>&quot;Wilson Jones “Snap” Scratch Pad Binder Tool for Ring Binders&quot;</value>
+        <value>&quot;Wilson Jones 1\&quot; Hanging DublLock® Ring Binders&quot;</value>
+        <value>&quot;Wilson Jones 14 Line Acrylic Coated Pressboard Data Binders&quot;</value>
+        <value>&quot;Wilson Jones Custom Binder Spines &amp; Labels&quot;</value>
+        <value>&quot;Wilson Jones DublLock® D-Ring Binders&quot;</value>
+        <value>&quot;Wilson Jones Easy Flow II™ Sheet Lifters&quot;</value>
+        <value>&quot;Wilson Jones Elliptical Ring 3 1/2\&quot; Capacity Binders, 800 sheets&quot;</value>
+        <value>&quot;Wilson Jones Hanging View Binder, White, 1\&quot;&quot;</value>
+        <value>&quot;Wilson Jones Impact Binders&quot;</value>
+        <value>&quot;Wilson Jones Ledger-Size, Piano-Hinge Binder, 2\&quot;, Blue&quot;</value>
+        <value>&quot;Wilson Jones Standard D-Ring Binders&quot;</value>
+        <value>&quot;Wilson Jones Suede Grain Vinyl Binders&quot;</value>
+        <value>&quot;Wilson Jones Turn Tabs Binder Tool for Ring Binders&quot;</value>
+        <value>&quot;Wilson Jones® Four-Pocket Poly Binders&quot;</value>
+      </bin>
+      <bin value='&quot;Xerox 188&quot;'>
+        <value>&quot;Xerox 188&quot;</value>
+        <value>&quot;Xerox 1880&quot;</value>
+        <value>&quot;Xerox 1881&quot;</value>
+        <value>&quot;Xerox 1882&quot;</value>
+        <value>&quot;Xerox 1883&quot;</value>
+        <value>&quot;Xerox 1885&quot;</value>
+        <value>&quot;Xerox 1887&quot;</value>
+        <value>&quot;Xerox 1888&quot;</value>
+        <value>&quot;Xerox 1891&quot;</value>
+        <value>&quot;Xerox 1892&quot;</value>
+        <value>&quot;Xerox 1893&quot;</value>
+        <value>&quot;Xerox 1894&quot;</value>
+        <value>&quot;Xerox 1895&quot;</value>
+        <value>&quot;Xerox 1896&quot;</value>
+        <value>&quot;Xerox 1897&quot;</value>
+        <value>&quot;Xerox 1898&quot;</value>
+        <value>&quot;Xerox 1899&quot;</value>
+        <value>&quot;Xerox 19&quot;</value>
+        <value>&quot;Xerox 190&quot;</value>
+        <value>&quot;Xerox 1903&quot;</value>
+        <value>&quot;Xerox 1904&quot;</value>
+        <value>&quot;Xerox 1905&quot;</value>
+        <value>&quot;Xerox 1906&quot;</value>
+        <value>&quot;Xerox 1907&quot;</value>
+        <value>&quot;Xerox 1908&quot;</value>
+        <value>&quot;Xerox 191&quot;</value>
+        <value>&quot;Xerox 1910&quot;</value>
+        <value>&quot;Xerox 1916&quot;</value>
+        <value>&quot;Xerox 1917&quot;</value>
+        <value>&quot;Xerox 1919&quot;</value>
+        <value>&quot;Xerox 1920&quot;</value>
+        <value>&quot;Xerox 1922&quot;</value>
+        <value>&quot;Xerox 1923&quot;</value>
+        <value>&quot;Xerox 1924&quot;</value>
+        <value>&quot;Xerox 1926&quot;</value>
+        <value>&quot;Xerox 1927&quot;</value>
+        <value>&quot;Xerox 1928&quot;</value>
+        <value>&quot;Xerox 1929&quot;</value>
+        <value>&quot;Xerox 193&quot;</value>
+        <value>&quot;Xerox 1930&quot;</value>
+        <value>&quot;Xerox 1932&quot;</value>
+        <value>&quot;Xerox 1933&quot;</value>
+        <value>&quot;Xerox 1934&quot;</value>
+        <value>&quot;Xerox 1935&quot;</value>
+        <value>&quot;Xerox 1936&quot;</value>
+        <value>&quot;Xerox 1937&quot;</value>
+        <value>&quot;Xerox 1938&quot;</value>
+        <value>&quot;Xerox 1939&quot;</value>
+        <value>&quot;Xerox 194&quot;</value>
+        <value>&quot;Xerox 1940&quot;</value>
+        <value>&quot;Xerox 1941&quot;</value>
+        <value>&quot;Xerox 1947&quot;</value>
+        <value>&quot;Xerox 1948&quot;</value>
+        <value>&quot;Xerox 1949&quot;</value>
+        <value>&quot;Xerox 195&quot;</value>
+        <value>&quot;Xerox 1950&quot;</value>
+        <value>&quot;Xerox 1951&quot;</value>
+        <value>&quot;Xerox 1952&quot;</value>
+        <value>&quot;Xerox 1953&quot;</value>
+        <value>&quot;Xerox 1954&quot;</value>
+        <value>&quot;Xerox 1959&quot;</value>
+        <value>&quot;Xerox 196&quot;</value>
+        <value>&quot;Xerox 1961&quot;</value>
+        <value>&quot;Xerox 1962&quot;</value>
+        <value>&quot;Xerox 1963&quot;</value>
+        <value>&quot;Xerox 1964&quot;</value>
+        <value>&quot;Xerox 1966&quot;</value>
+        <value>&quot;Xerox 1968&quot;</value>
+        <value>&quot;Xerox 197&quot;</value>
+        <value>&quot;Xerox 1971&quot;</value>
+        <value>&quot;Xerox 1972&quot;</value>
+        <value>&quot;Xerox 1973&quot;</value>
+        <value>&quot;Xerox 1974&quot;</value>
+        <value>&quot;Xerox 1976&quot;</value>
+        <value>&quot;Xerox 1977&quot;</value>
+        <value>&quot;Xerox 1978&quot;</value>
+        <value>&quot;Xerox 1979&quot;</value>
+        <value>&quot;Xerox 198&quot;</value>
+        <value>&quot;Xerox 1980&quot;</value>
+        <value>&quot;Xerox 1981&quot;</value>
+        <value>&quot;Xerox 1982&quot;</value>
+        <value>&quot;Xerox 1983&quot;</value>
+        <value>&quot;Xerox 1984&quot;</value>
+        <value>&quot;Xerox 1985&quot;</value>
+        <value>&quot;Xerox 1986&quot;</value>
+        <value>&quot;Xerox 1988&quot;</value>
+        <value>&quot;Xerox 1989&quot;</value>
+        <value>&quot;Xerox 199&quot;</value>
+        <value>&quot;Xerox 1991&quot;</value>
+        <value>&quot;Xerox 1992&quot;</value>
+        <value>&quot;Xerox 1993&quot;</value>
+        <value>&quot;Xerox 1994&quot;</value>
+        <value>&quot;Xerox 1995&quot;</value>
+        <value>&quot;Xerox 1996&quot;</value>
+        <value>&quot;Xerox 1997&quot;</value>
+        <value>&quot;Xerox 1998&quot;</value>
+        <value>&quot;Xerox 2&quot;</value>
+        <value>&quot;Xerox 20&quot;</value>
+        <value>&quot;Xerox 200&quot;</value>
+        <value>&quot;Xerox 204&quot;</value>
+        <value>&quot;Xerox 207&quot;</value>
+        <value>&quot;Xerox 209&quot;</value>
+        <value>&quot;Xerox 21&quot;</value>
+        <value>&quot;Xerox 210&quot;</value>
+        <value>&quot;Xerox 212&quot;</value>
+        <value>&quot;Xerox 213&quot;</value>
+        <value>&quot;Xerox 214&quot;</value>
+        <value>&quot;Xerox 215&quot;</value>
+        <value>&quot;Xerox 216&quot;</value>
+        <value>&quot;Xerox 217&quot;</value>
+        <value>&quot;Xerox 220&quot;</value>
+        <value>&quot;Xerox 221&quot;</value>
+        <value>&quot;Xerox 223&quot;</value>
+        <value>&quot;Xerox 224&quot;</value>
+        <value>&quot;Xerox 226&quot;</value>
+        <value>&quot;Xerox 227&quot;</value>
+        <value>&quot;Xerox 229&quot;</value>
+        <value>&quot;Xerox 23&quot;</value>
+        <value>&quot;Xerox 231&quot;</value>
+        <value>&quot;Xerox 4200 Series MultiUse Premium Copy Paper (20Lb. and 84 Bright)&quot;</value>
+        <value>&quot;Xerox Blank Computer Paper&quot;</value>
+      </bin>
+    </calculation>
+    <aliases>
+      <alias key='&quot;*Staples* Highlighting Markers&quot;' value='Staples' />
+      <alias key='&quot;3M Hangers With Command Adhesive&quot;' value='3M' />
+      <alias key='&quot;Acco 3-Hole Punch&quot;' value='Acco' />
+      <alias key='&quot;Acme Design Line 8\&quot; Stainless Steel Bent Scissors w/Champagne Handles, 3-1/8\&quot; Cut&quot;' value='Acme' />
+      <alias key='&quot;Avery 05222 Permanent Self-Adhesive File Folder Labels for Typewriters, on Rolls, White, 250/Roll&quot;' value='Avery' />
+      <alias key='&quot;Belkin 105-Key Black Keyboard&quot;' value='Belkin' />
+      <alias key='&quot;Boston 1645 Deluxe Heavier-Duty Electric Pencil Sharpener&quot;' value='Boston' />
+      <alias key='&quot;Canon BP1200DH 12-Digit Bubble Jet Printing Calculator&quot;' value='Canon' />
+      <alias key='&quot;Eldon Advantage® Chair Mats for Low to Medium Pile Carpets&quot;' value='Eldon' />
+      <alias key='&quot;Epson C62 Color Inkjet Printer&quot;' value='Epson' />
+      <alias key='&quot;Fellowes 17-key keypad for PS/2 interface&quot;' value='Fellowes' />
+      <alias key='&quot;Hon 2090 “Pillow Soft” Series Mid Back Swivel/Tilt Chairs&quot;' value='Hon' />
+      <alias key='&quot;Newell 307&quot;' value='Newell' />
+      <alias key='&quot;Sony IBM Color Diskettes, 25/Pack&quot;' value='Sony' />
+      <alias key='&quot;Wilson Jones “Snap” Scratch Pad Binder Tool for Ring Binders&quot;' value='Wilson Jones' />
+      <alias key='&quot;Xerox 188&quot;' value='Xerox' />
+      <alias key='&quot;Zoom V.92 V.44 PCI Internal Controllerless FaxModem&quot;' value='Other' />
+    </aliases>
+  </column>
+  <column datatype='string' hidden='true' name='[Unique cust loc]' role='dimension' type='nominal'>
+  </column>
+  <column aggregation='Avg' datatype='real' default-format='c&quot;$&quot;#,##0.00;(&quot;$&quot;#,##0.00)' name='[Unit Price]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' hidden='true' name='[Versandart]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='real' hidden='true' name='[Year Month]' role='measure' type='quantitative'>
+  </column>
+  <column datatype='string' hidden='true' name='[Z City Country]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+  </column>
+  <column caption='产品子类别' datatype='string' hidden='true' name='[产品子类别]' role='dimension' type='nominal'>
+  </column>
+  <column caption='产品容器' datatype='string' hidden='true' name='[产品容器]' role='dimension' type='nominal'>
+  </column>
+  <column caption='产品类别' datatype='string' hidden='true' name='[产品类别]' role='dimension' type='nominal'>
+  </column>
+  <column caption='出荷モード' datatype='string' hidden='true' name='[出荷モード]' role='dimension' type='nominal'>
+  </column>
+  <column caption='客户细分' datatype='string' hidden='true' name='[客户细分]' role='dimension' type='nominal'>
+  </column>
+  <column caption='注文の優先度' datatype='string' hidden='true' name='[注文の優先度]' role='dimension' type='nominal'>
+  </column>
+  <column caption='装运模式' datatype='string' hidden='true' name='[装运模式]' role='dimension' type='nominal'>
+  </column>
+  <column caption='製品カテゴリー' datatype='string' hidden='true' name='[製品カテゴリー]' role='dimension' type='nominal'>
+  </column>
+  <column caption='製品コンテナー' datatype='string' hidden='true' name='[製品コンテナー]' role='dimension' type='nominal'>
+  </column>
+  <column caption='製品サブカテゴリー' datatype='string' hidden='true' name='[製品サブカテゴリー]' role='dimension' type='nominal'>
+  </column>
+  <column caption='订单优先级' datatype='string' hidden='true' name='[订单优先级]' role='dimension' type='nominal'>
+  </column>
+  <column caption='顧客区分' datatype='string' hidden='true' name='[顧客区分]' role='dimension' type='nominal'>
+  </column>
+  <column caption='고객 세그먼트' datatype='string' hidden='true' name='[고객 세그먼트]' role='dimension' type='nominal'>
+  </column>
+  <column caption='선적 모드' datatype='string' hidden='true' name='[선적 모드]' role='dimension' type='nominal'>
+  </column>
+  <column caption='제품 범주' datatype='string' hidden='true' name='[제품 범주]' role='dimension' type='nominal'>
+  </column>
+  <column datatype='string' hidden='true' name='[제품 컨테이너]' role='dimension' type='nominal'>
+  </column>
+  <column caption='제품 하위 범주' datatype='string' hidden='true' name='[제품 하위 범주]' role='dimension' type='nominal'>
+  </column>
+  <column caption='주문 우선 순위' datatype='string' hidden='true' name='[주문 우선 순위]' role='dimension' type='nominal'>
+  </column>
+  <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+  <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+  <column-instance column='[Order Date]' derivation='Year' name='[yr:Order Date:ok]' pivot='key' type='ordinal' />
+  <group caption='Countries - high profit &amp; sales' name='[Countries - high avg profit &amp; sales]' name-style='unqualified' user:ui-builder='lasso-group'>
+    <groupfilter function='union'>
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Australia&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Canada&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Colombia&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Côte-d&apos;Ivoire&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Iraq&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Ireland&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Morocco&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Poland&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;South Africa&quot;' />
+      <groupfilter function='member' level='[none:Country:nk]' member='&quot;Ukraine&quot;' />
+    </groupfilter>
+  </group>
+  <group caption='Top Customers by Profit' name='[Highest profit customers]' name-style='unqualified' user:ui-builder='filter-group'>
+    <groupfilter count='[Parameters].[Parameter 2]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+      <groupfilter direction='DESC' expression='SUM([Profit])' function='order' user:ui-marker='order'>
+        <groupfilter function='level-members' level='[Customer Name]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </groupfilter>
+    </groupfilter>
+  </group>
+  <drill-paths>
+    <drill-path name='Mapping items'>
+      <field>[Country]</field>
+      <field>[State or Province]</field>
+      <field>[City]</field>
+      <field>[Postal Code]</field>
+      <desc>
+        <formatted-text>
+          <run>Filled maps available for 1st two levels</run>
+        </formatted-text>
+      </desc>
+    </drill-path>
+  </drill-paths>
+  <folder name='Cliente' role='dimensions'>
+    <folder-item name='[Continent]' type='field' />
+    <folder-item name='[Customer Name]' type='field' />
+    <folder-item name='[Region]' type='field' />
+    <folder-item name='[Segmento de cliente]' type='field' />
+    <folder-item name='Mapping items' type='drillpath' />
+  </folder>
+  <folder name='Pedido' role='dimensions'>
+    <folder-item name='[Modo de envio]' type='field' />
+    <folder-item name='[Order Date]' type='field' />
+    <folder-item name='[Prioridade do pedido]' type='field' />
+    <folder-item name='[Ship Date]' type='field' />
+  </folder>
+  <folder name='Producto' role='dimensions'>
+    <folder-item name='[Categoría de producto]' type='field' />
+    <folder-item name='[Contenedor de productos]' type='field' />
+    <folder-item name='[Product Name]' type='field' />
+    <folder-item name='[Subcategoría de producto]' type='field' />
+    <folder-item name='[Supplier]' type='field' />
+  </folder>
+  <layout dim-ordering='alphabetic' dim-percentage='0.417983' group-percentage='0.111786' measure-ordering='alphabetic' measure-percentage='0.386391' show-structure='false' />
+  <style>
+    <style-rule element='mark'>
+      <encoding attr='color' field='[none:Country:nk]' type='palette'>
+        <map to='#17becf'>
+          <bucket>&quot;India&quot;</bucket>
+        </map>
+        <map to='#17becf'>
+          <bucket>&quot;Spain&quot;</bucket>
+        </map>
+        <map to='#1f77b4'>
+          <bucket>&quot;Algeria&quot;</bucket>
+        </map>
+        <map to='#1f77b4'>
+          <bucket>&quot;Iran (Islamic Republic of)&quot;</bucket>
+        </map>
+        <map to='#1f77b4'>
+          <bucket>&quot;Thailand&quot;</bucket>
+        </map>
+        <map to='#2ca02c'>
+          <bucket>&quot;Bangladesh&quot;</bucket>
+        </map>
+        <map to='#2ca02c'>
+          <bucket>&quot;Japan&quot;</bucket>
+        </map>
+        <map to='#2ca02c'>
+          <bucket>&quot;Switzerland&quot;</bucket>
+        </map>
+        <map to='#2ca02c'>
+          <bucket>&quot;United States of America&quot;</bucket>
+        </map>
+        <map to='#7f7f7f'>
+          <bucket>&quot;France&quot;</bucket>
+        </map>
+        <map to='#7f7f7f'>
+          <bucket>&quot;Poland&quot;</bucket>
+        </map>
+        <map to='#7f7f7f'>
+          <bucket>&quot;Russian Federation&quot;</bucket>
+        </map>
+        <map to='#8c564b'>
+          <bucket>&quot;Côte-d&apos;Ivoire&quot;</bucket>
+        </map>
+        <map to='#8c564b'>
+          <bucket>&quot;Czech Republic&quot;</bucket>
+        </map>
+        <map to='#8c564b'>
+          <bucket>&quot;Pakistan&quot;</bucket>
+        </map>
+        <map to='#9467bd'>
+          <bucket>&quot;China&quot;</bucket>
+        </map>
+        <map to='#9467bd'>
+          <bucket>&quot;Myanmar&quot;</bucket>
+        </map>
+        <map to='#9467bd'>
+          <bucket>&quot;New Zealand&quot;</bucket>
+        </map>
+        <map to='#98df8a'>
+          <bucket>&quot;Brazil&quot;</bucket>
+        </map>
+        <map to='#98df8a'>
+          <bucket>&quot;Kenya&quot;</bucket>
+        </map>
+        <map to='#98df8a'>
+          <bucket>&quot;Venezuela (Bolivarian Republic of)&quot;</bucket>
+        </map>
+        <map to='#9edae5'>
+          <bucket>&quot;Indonesia&quot;</bucket>
+        </map>
+        <map to='#9edae5'>
+          <bucket>&quot;Sudan&quot;</bucket>
+        </map>
+        <map to='#aec7e8'>
+          <bucket>&quot;Angola&quot;</bucket>
+        </map>
+        <map to='#aec7e8'>
+          <bucket>&quot;Iraq&quot;</bucket>
+        </map>
+        <map to='#aec7e8'>
+          <bucket>&quot;Ireland&quot;</bucket>
+        </map>
+        <map to='#aec7e8'>
+          <bucket>&quot;Turkey&quot;</bucket>
+        </map>
+        <map to='#bcbd22'>
+          <bucket>&quot;Greece&quot;</bucket>
+        </map>
+        <map to='#bcbd22'>
+          <bucket>&quot;Singapore&quot;</bucket>
+        </map>
+        <map to='#c49c94'>
+          <bucket>&quot;Democratic People&apos;s Republic of Korea&quot;</bucket>
+        </map>
+        <map to='#c49c94'>
+          <bucket>&quot;Norway&quot;</bucket>
+        </map>
+        <map to='#c49c94'>
+          <bucket>&quot;Peru&quot;</bucket>
+        </map>
+        <map to='#c5b0d5'>
+          <bucket>&quot;Colombia&quot;</bucket>
+        </map>
+        <map to='#c5b0d5'>
+          <bucket>&quot;Nigeria&quot;</bucket>
+        </map>
+        <map to='#c7c7c7'>
+          <bucket>&quot;Germany&quot;</bucket>
+        </map>
+        <map to='#c7c7c7'>
+          <bucket>&quot;Portugal&quot;</bucket>
+        </map>
+        <map to='#c7c7c7'>
+          <bucket>&quot;Saudi Arabia&quot;</bucket>
+        </map>
+        <map to='#d62728'>
+          <bucket>&quot;Canada&quot;</bucket>
+        </map>
+        <map to='#d62728'>
+          <bucket>&quot;Mexico&quot;</bucket>
+        </map>
+        <map to='#d62728'>
+          <bucket>&quot;Ukraine&quot;</bucket>
+        </map>
+        <map to='#d62728'>
+          <bucket>&quot;Viet Nam&quot;</bucket>
+        </map>
+        <map to='#dbdb8d'>
+          <bucket>&quot;Hong Kong&quot;</bucket>
+        </map>
+        <map to='#dbdb8d'>
+          <bucket>&quot;South Africa&quot;</bucket>
+        </map>
+        <map to='#e377c2'>
+          <bucket>&quot;Egypt&quot;</bucket>
+        </map>
+        <map to='#e377c2'>
+          <bucket>&quot;Philippines&quot;</bucket>
+        </map>
+        <map to='#f7b6d2'>
+          <bucket>&quot;Ethiopia&quot;</bucket>
+        </map>
+        <map to='#f7b6d2'>
+          <bucket>&quot;Fiji&quot;</bucket>
+        </map>
+        <map to='#f7b6d2'>
+          <bucket>&quot;Republic of Korea&quot;</bucket>
+        </map>
+        <map to='#ff7f0e'>
+          <bucket>&quot;Argentina&quot;</bucket>
+        </map>
+        <map to='#ff7f0e'>
+          <bucket>&quot;Israel&quot;</bucket>
+        </map>
+        <map to='#ff7f0e'>
+          <bucket>&quot;Sweden&quot;</bucket>
+        </map>
+        <map to='#ff7f0e'>
+          <bucket>&quot;United Kingdom&quot;</bucket>
+        </map>
+        <map to='#ff9896'>
+          <bucket>&quot;Chile&quot;</bucket>
+        </map>
+        <map to='#ff9896'>
+          <bucket>&quot;Morocco&quot;</bucket>
+        </map>
+        <map to='#ffbb78'>
+          <bucket>&quot;Australia&quot;</bucket>
+        </map>
+        <map to='#ffbb78'>
+          <bucket>&quot;Austria&quot;</bucket>
+        </map>
+        <map to='#ffbb78'>
+          <bucket>&quot;Italy&quot;</bucket>
+        </map>
+        <map to='#ffbb78'>
+          <bucket>&quot;United Republic of Tanzania&quot;</bucket>
+        </map>
+      </encoding>
+      <encoding attr='color' field='[none:Continent:nk]' type='palette'>
+        <map to='#1f77b4'>
+          <bucket>&quot;Africa&quot;</bucket>
+        </map>
+        <map to='#2ca02c'>
+          <bucket>&quot;Australasia&quot;</bucket>
+        </map>
+        <map to='#8c564b'>
+          <bucket>&quot;South America&quot;</bucket>
+        </map>
+        <map to='#9467bd'>
+          <bucket>&quot;North America&quot;</bucket>
+        </map>
+        <map to='#d62728'>
+          <bucket>&quot;Europe&quot;</bucket>
+        </map>
+        <map to='#ff7f0e'>
+          <bucket>&quot;Asia&quot;</bucket>
+        </map>
+      </encoding>
+      <encoding attr='color' field='[:Measure Names]' type='palette'>
+        <map to='#1f77b4'>
+          <bucket>&quot;[Sample - Superstore Sales Portuguese (Português)].[usr:Calculation_9100813121824802:qk]&quot;</bucket>
+        </map>
+        <map to='#2ca02c'>
+          <bucket>&quot;[Sample - Superstore Sales Portuguese (Português)].[sum:Sales new:qk]&quot;</bucket>
+        </map>
+        <map to='#9467bd'>
+          <bucket>&quot;[Sample - Superstore Sales Portuguese (Português)].[sum:Profit:qk]&quot;</bucket>
+        </map>
+        <map to='#d62728'>
+          <bucket>&quot;[Sample - Superstore Sales Portuguese (Português)].[sum:Sales:qk]&quot;</bucket>
+        </map>
+        <map to='#ff7f0e'>
+          <bucket>&quot;[Sample - Superstore Sales Portuguese (Português)].[sum:Profit new:qk]&quot;</bucket>
+        </map>
+      </encoding>
+      <encoding attr='color' field='[yr:Order Date:ok]' type='palette'>
+        <map to='#1c73b1'>
+          <bucket>2012</bucket>
+        </map>
+        <map to='#67add4'>
+          <bucket>2011</bucket>
+        </map>
+        <map to='#b4d4da'>
+          <bucket>2010</bucket>
+        </map>
+        <map to='#d62728'>
+          <bucket>2013</bucket>
+        </map>
+      </encoding>
+    </style-rule>
+  </style>
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+  <datasource-dependencies datasource='Parameters'>
+    <column caption='Profit Bin Size' datatype='real' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='2000.0'>
+      <calculation class='tableau' formula='2000.0' />
+      <range granularity='500.0' max='2500.0' min='500.0' />
+    </column>
+    <column caption='Top Customers' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='15'>
+      <calculation class='tableau' formula='15' />
+      <range granularity='5' max='40' min='5' />
+    </column>
+  </datasource-dependencies>
+</datasource>
