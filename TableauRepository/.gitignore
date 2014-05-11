@@ -1,4 +1,3 @@
-Logs/log.txt
-Logs/tabprotosrv.txt
-Logs/tdeserver.txt
-Logs/log_bk.txt
+Logs/log*.txt
+Logs/tabprotosrv*.txt
+Logs/tdeserver*.txt
