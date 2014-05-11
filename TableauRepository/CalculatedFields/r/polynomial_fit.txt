@@ -1,0 +1,18 @@
+// Tableau calculated field using R to predict values using a polynomial fit of degree two.
+// Data may contain zeroes which are excluded from the fit, but are predicted by the model.
+SCRIPT_REAL("
+
+    xdata <- .arg1
+    ydata <- .arg2
+ 
+    indices <- which( abs(ydata) < 0.01 )
+    ndata <- length( ydata )
+    weights <- rep(1, ndata)
+    weights[indices] = 0
+ 
+    model <- lm( ydata ~ xdata + I(xdata^2), weights=weights )
+    model$fitted
+
+",
+SUM( [XVAR] ), SUM( [YVAR] )
+)

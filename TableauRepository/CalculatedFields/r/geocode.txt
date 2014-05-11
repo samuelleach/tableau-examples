@@ -1,0 +1,12 @@
+//Geocode with ggmap/R
+SCRIPT_STR("
+
+library('ggmap');
+
+geo <- geocode(.arg1, output='latlon');
+geo$latlon <- do.call(paste, c(geo[c('lat','lon')], sep = ','));
+geo$latlon
+
+",
+ATTR([FULL ADDRESS])
+)

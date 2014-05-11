@@ -1,0 +1,11 @@
+//Use R package WDI to get total population given a country ISO2 code.
+SCRIPT_REAL("
+
+library(WDI);
+
+df <- WDI(country=c(.arg1), indicator='SP.POP.TOTL', start=2011, end=2011);
+df$SP.POP.TOTL
+
+",
+ATTR([COUTRYISOCODE])
+)

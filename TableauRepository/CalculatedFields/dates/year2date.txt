@@ -1,0 +1,2 @@
+//Convert a year (YYYY) into a date
+DATEPARSE("yyyy", STR(year) )

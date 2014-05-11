@@ -1,0 +1,10 @@
+//Sentiment analysis from
+//http://boraberan.wordpress.com/2013/12/24/sentiment-analysis-in-tableau-with-r/
+
+SCRIPT_STR('
+
+classify_emotion(.arg1,algorithm="bayes",verbose=TRUE)[,7]
+
+',
+ATTR([CommentText])
+)
