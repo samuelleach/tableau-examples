@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<r-serve-config is-auth-enabled='false' version='8.3'>
+  <connection host='localhost' port='6311' prev-host='' />
+</r-serve-config>
