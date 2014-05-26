@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mapsource inline="true" version="8.2">
+  <connection api-version="2" class="OpenStreetMap" indicator-server='http://services.arcgisonline.com' layer-separator="," max-stretch="1.2" min-shrink="0.667" offline="" port="80" server='http://services.arcgisonline.com' url-format='/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{Z}/{Y}/{X}'/>
+  <layers>
+    <layer display-name="World Light Grey Base" name="World Light Grey Base" show-ui="true" type="features" />
+  </layers>
+  <map-styles>
+    <map-style display-name="World Light Grey Base" name="World Light Grey Base">
+      <map-layer-style name="World Light Grey Base" request-string="World Light Grey Base" />
+    </map-style>
+  </map-styles>
+  <properties />
+  <mapsource-defaults version="8.2">
+    <style>
+      <style-rule element="map-layer">
+        <format attr="enabled" id="World Topo" value="World Topo" />
+      </style-rule>
+      <style-rule element="map">
+        <format attr="washout" value="0.0" />
+      </style-rule>
+    </style>
+  </mapsource-defaults>
+</mapsource>
