@@ -1,0 +1,5 @@
+// Using DATEPARSE and REMOVE to remove st, nd, rd, th from date strings.
+// For instance: '20th May 2014 22:46'
+
+
+DATEPARSE("dd MMM YYYY HH:mm", REPLACE(REPLACE(REPLACE(REPLACE([Datetime], "rd", ""), "th", ""), "nd", ""), "st", ""))
