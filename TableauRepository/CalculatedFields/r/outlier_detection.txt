@@ -1,0 +1,18 @@
+# Outlier detection, based on http://www.tableausoftware.com/about/blog/2013/10/tableau-81-and-r-25327?cb=vimxwlu58c
+
+IF SCRIPT_REAL("
+
+library(mvoutlier);
+sign2(cbind(.arg1))$wfinal01
+
+",
+
+AVG([INSERT VAR])
+
+) == 0
+
+THEN
+	"Outlier"
+ELSE
+	"OK"
+END
