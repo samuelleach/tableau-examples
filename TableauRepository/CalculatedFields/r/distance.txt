@@ -1,0 +1,19 @@
+// Calculate total distance in km along some decimal lon/lat path.
+
+// For the table calculation settings, use 'Compute using: Date',
+// 'At the level: Date' and 'Restarting every: None'.
+
+
+SCRIPT_REAL("
+library('geosphere');
+
+lon <- .arg1;
+lat <- .arg2;
+
+xy <- matrix(c(lon, lat), ncol = 2);
+
+distance_km <- perimeter(xy)/1000;
+distance_km;
+",
+ATTR([Longitude]), ATTR([Latitude])
+)
