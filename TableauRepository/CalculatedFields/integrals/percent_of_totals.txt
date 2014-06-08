@@ -1,0 +1,8 @@
+// Based on http://www.theinformationlab.co.uk/2013/01/14/maintaining-percent-of-total-whilst-filtering/
+
+// Create a duplicate data set called Totals. Then in the original
+// dataset create a calculated filed caled '% of totals'.
+// This allows to calculate percentages as a function of the total
+// when filtering.
+
+SUM([Number of Records])/SUM([Totals].[Number of Records]) * 100.
