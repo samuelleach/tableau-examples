@@ -1,0 +1,1 @@
+DATEDIFF('second', MIN([Date]), MAX([Date]))/ 60. / 60.
