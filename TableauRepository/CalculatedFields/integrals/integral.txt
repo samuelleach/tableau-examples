@@ -1,0 +1,9 @@
+// Based on http://community.tableausoftware.com/docs/DOC-1402 by Tyler Martin
+
+//The below calculation will compute the definite integral, over the whole domain, of f(x).
+// If the current row is the first row, the area under the curve is zero.
+IF FIRST()==0 THEN
+     0
+ELSE    
+    0.5*RUNNING_SUM((SUM([f(x)]) + LOOKUP(SUM([f(x)]), -1))*(SUM([x]) - LOOKUP(SUM([x]), -1)))
+END
