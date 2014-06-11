@@ -1,0 +1,13 @@
+// Based on http://community.tableausoftware.com/docs/DOC-1427 by Tyler Martin
+
+// The below calculation is a second order approximation to the second derivative of f(x).
+// If the current row is the first row, then use a forward difference to compute the endpoint
+IF FIRST()==0 THEN
+(2*SUM([f(x)])-5*LOOKUP(SUM([f(x)]),1)+4*LOOKUP(SUM([f(x)]),2)-LOOKUP(SUM([f(x)]),3))/POWER((LOOKUP(SUM([x]),1)-SUM([x])),2)
+// If the current row is the last row, then use a backward difference to compute the endpoint.
+ELSEIF LAST()==0 THEN
+(2*SUM([f(x)])-5*LOOKUP(SUM([f(x)]),-1)+4*LOOKUP(SUM([f(x)]),-2)-LOOKUP(SUM([f(x)]),-3))/POWER((LOOKUP(SUM([x]),-1)-SUM([x])),2)
+ELSE
+// Otherwise use a second order centered difference
+(LOOKUP(SUM([f(x)]),1)-2*SUM([f(x)])+LOOKUP(SUM([f(x)]),-1))/(POWER((LOOKUP(SUM([x]),1)-SUM([x])),2))
+END
