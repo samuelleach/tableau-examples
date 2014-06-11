@@ -1,7 +1,9 @@
 Logs/log*.txt
 Logs/tabprotosrv*.txt
+Logs/tabprotosrv-error.*
 Logs/tdeserver*.txt
 Logs/tableau-error.*
+
 
 
 Local\ Data
