@@ -1,0 +1,11 @@
+// Typical table calculation for finding "Pareto" 80% point
+
+// Combine with a measure called 80%
+//
+// if [Fraction of Cumulative Value] <= 0.8 THEN
+//     "Within 80%"
+// ELSE
+//     "Outside 80%"
+// END
+
+RUNNING_SUM(SUM([Total Value of Deals]))/TOTAL(SUM([Total Value of Deals]))
