@@ -1,0 +1,4 @@
+// http://www.tableausoftware.com/learn/tutorials/on-demand/bump-charts-0
+// Needed for bump chart table calculation
+
+index()
