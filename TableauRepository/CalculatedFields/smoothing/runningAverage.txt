@@ -1,0 +1,3 @@
+// Based on http://www.tableausoftware.com/learn/tutorials/on-demand/bollinger-bands?signin=2a23ccacaf9b502b1df42b7409590d9c
+
+window_avg(avg([measure]), -[Choose periods for moving average], 0)
