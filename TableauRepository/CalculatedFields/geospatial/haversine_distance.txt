@@ -1,0 +1,8 @@
+# Via http://kb.tableau.com/articles/knowledgebase/radius-filters
+
+3959 * ACOS
+(
+SIN(RADIANS([Lat])) * SIN(RADIANS([Lat_array]))+
+COS(RADIANS([Lat])) * COS(RADIANS([Lat_array])) *
+COS(RADIANS([Lon_array]) - RADIANS([Lon]))
+)
