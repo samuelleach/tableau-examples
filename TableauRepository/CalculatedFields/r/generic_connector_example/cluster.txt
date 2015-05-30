@@ -1,0 +1,9 @@
+# via github user Brock Tibert @Btibert3
+
+// Source our cluster function; feed the tableau data to the function
+
+SCRIPT_STR(
+"source('cluster.r');
+cluster_tableau(.arg1, .arg2, .arg3)",
+SUM([Measure1], [Measure2], [Measure3])
+)
