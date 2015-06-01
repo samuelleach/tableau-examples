@@ -1,0 +1,1 @@
+{ FIXED [LatBucket] : AVG([Lat]) }
