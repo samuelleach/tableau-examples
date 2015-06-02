@@ -1,1 +1,1 @@
-{ FIXED [LatBucket] : AVG([Lat]) }
+{ FIXED [LatBucket], [LonBucket] : AVG([Lat]) }
