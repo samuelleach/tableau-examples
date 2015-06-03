@@ -1,5 +1,5 @@
 <p align="center" >
-  <img src="https://github.com/samuelleach/censusview/raw/tableau-examples/banner.png" alt="tableau-examples" title="tableau-examples">
+  <img src="https://github.com/samuelleach/tableau-examples/raw/master/banner.png" alt="tableau-examples" title="tableau-examples">
 </p>
 
 tableau-examples
