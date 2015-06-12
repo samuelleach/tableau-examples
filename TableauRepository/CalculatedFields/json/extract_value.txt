@@ -1,0 +1,15 @@
+// Extract the value of a key/value pair from a JSON string
+
+// In this example we want the value of a key called highwaytype, eg:
+// {"highwaytype":"motorway"}
+
+// The regex is via http://stackoverflow.com/questions/14349889/how-to-use-a-regular-expression-to-extract-json-fields
+// and tested with http://regexr.com
+
+
+REGEXP_EXTRACT([JSON Column],'"highwaytype":"((\\"|[^"])*)"')
+
+
+// Here is a variation to get the value of a float, removing a trailing comma:
+
+// float( REGEXP_EXTRACT([Weather],'"temp":((\\"|[^"!,])*)') )
