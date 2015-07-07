@@ -7,7 +7,7 @@ SCRIPT_INT("
 
     num <- .arg3[1]
 
-    kmeans(dat, num, nstart=num)$cluster
+    tryCatch({kmeans(dat, num, nstart=num)$cluster}, error = function(e) { 1 })
 ",     
 SUM([Lon]), SUM([Lat]), [Number of Clusters], [Seed]
 )
