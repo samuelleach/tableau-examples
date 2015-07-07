@@ -1,0 +1,13 @@
+SCRIPT_INT("
+    set.seed( .arg4[1] )
+    lon <- ( .arg1 - mean(.arg1) ) / sd(.arg1)
+    lat <- ( .arg2 - mean(.arg2) ) / sd(.arg2)
+
+    dat <- cbind(lon, lat)
+
+    num <- .arg3[1]
+
+    kmeans(dat, num, nstart=num)$cluster
+",     
+SUM([Lon]), SUM([Lat]), [Number of Clusters], [Seed]
+)
