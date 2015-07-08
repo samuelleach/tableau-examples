@@ -1,0 +1,5 @@
+IF([Hour of Day] > 18 OR [Hour of Day] < 6) THEN
+    "Night"
+ELSE
+    "Day"
+END
