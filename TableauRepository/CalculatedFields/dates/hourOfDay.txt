@@ -1,0 +1,1 @@
+(DATEPART('hour', [Event Timestamp] ) + [Timezone] ) % 24
