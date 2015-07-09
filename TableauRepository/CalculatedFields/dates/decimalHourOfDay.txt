@@ -1,0 +1,3 @@
+(DATEPART('hour', [Event Timestamp] ) + [Timezone] ) % 24 +
+ DATEPART('minute', [Event Timestamp] ) / 60. +
+ DATEPART('second', [Event Timestamp] ) / 3600.
