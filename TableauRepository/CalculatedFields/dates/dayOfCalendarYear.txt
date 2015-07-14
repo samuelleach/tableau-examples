@@ -1,0 +1,6 @@
+# Convert a date to an integer, eg 30 January 2014 -> 30
+# TODO: Generalise this to a proper Julian day.
+
+# Via http://community.tableau.com/thread/107519	
+
+DATEDIFF('day', DATETRUNC('year', [Start Time]), [Start Time] ) + 1
