@@ -1,0 +1,4 @@
+# Convert a date to an integer, 6 January 2014 -> 1
+# i.e. week 1
+
+DATEDIFF('week', DATETRUNC('year', [Start Time]), [Start Time] ) + 1
