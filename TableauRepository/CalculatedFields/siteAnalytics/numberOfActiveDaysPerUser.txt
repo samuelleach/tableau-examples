@@ -1,0 +1,3 @@
+# TODO - Convert this to use Julian Day, MJD, or 'nearest day'.
+
+{Fixed [User ID] : COUNTD([Day of Calendar Year])}

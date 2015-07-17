@@ -1,0 +1,9 @@
+# By Richard Leeke via http://community.tableau.com/docs/DOC-1316
+
+# To get this binning to display as expected, select 'Exact date' from the properties of this dimension.
+
+DATETIME(INT(FLOAT([datetime]) * ([Units per Day] / [N])) / ([Units per Day] / [N]))
+ 
+# [datetime] - A datetime (or date) dimension
+# [Units per Day] - The number of the chosen unit in a day (i.e. Day = 1, Hour = 24, Minute = 1,440, Second = 88,400)
+# [N] - The number of units per bin

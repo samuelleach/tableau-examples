@@ -1,0 +1,1 @@
+DATEDIFF("day", [First Interaction], [Last Interaction])

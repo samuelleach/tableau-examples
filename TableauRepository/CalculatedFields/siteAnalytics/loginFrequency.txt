@@ -1,0 +1,3 @@
+# Login 'frequency' in days (average amount of days between logins) 
+
+[Total Days User is Active]/[Number of Active Days per User]
