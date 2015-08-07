@@ -1,0 +1,11 @@
+# Takes a UK postcode (eg 'NW1 8TQ') and returns the first part of the postcode ('NW1')
+# known as the outcode, thereby performing a degree of geographical aggregation.
+# Assumes that the input postcode is formatted with a space after
+# the outcode. Could be generalised to a regex to work with out the space, by pattern
+# matching on the start of the incode which is always an integer.
+
+
+# via http://www.theinformationlab.co.uk/2010/07/14/uk-postcode-mapping-in-5-minutes/
+
+
+left([Postcode], find([Postcode], " ") -1)
