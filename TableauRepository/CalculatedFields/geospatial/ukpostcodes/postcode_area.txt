@@ -1,0 +1,3 @@
+# First one or two letters of a UK postcode
+
+REGEXP_EXTRACT([Postcode], '(^[A-Z]{1,2})')
