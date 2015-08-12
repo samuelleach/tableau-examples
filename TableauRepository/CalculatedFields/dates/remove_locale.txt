@@ -3,3 +3,6 @@
 
 
 DATEPARSE("dd MMM YYYY HH:mm", REPLACE(REPLACE(REPLACE(REPLACE([Datetime], "rd", ""), "th", ""), "nd", ""), "st", ""))
+
+// Also try regex for a more compact expression:
+// DATETIME(REGEXP_REPLACE([Datetime], 'th|st|rd|nd', ''))
