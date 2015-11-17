@@ -2,6 +2,21 @@
 
 <workbook>
 	<preferences>
+	   	<color-palette name="Eric Fischer colorblind safe cyclic" type="regular" >
+			<color>#A56565</color>
+		    <color>#A3647A</color>
+		    <color>#98678B</color>
+		    <color>#866E9B</color>
+		    <color>#6D76A4</color>
+		    <color>#4C7CA7</color>
+		    <color>#2D80A1</color>
+		    <color>#17838F</color>
+		    <color>#2B847D</color>
+		    <color>#3D846E</color>
+		    <color>#6B7D50</color>
+		    <color>#8E7148</color>
+		    <color>#A26759</color>
+		 </color-palette>
     	 <color-palette name="Example custom categorical 9" type="regular" >
 		     <color>#14C04D</color>
 		     <color>#E60C29</color>
