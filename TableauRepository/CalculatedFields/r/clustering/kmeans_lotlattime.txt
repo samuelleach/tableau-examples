@@ -1,0 +1,40 @@
+SCRIPT_INT("
+
+    lon <- .arg1
+    lat <- .arg2
+    time <- .arg3
+    maxnc <- .arg4[1]
+    seed <- .arg5[1]
+
+    set.seed(seed)
+
+   #lon <- ( lon - mean(lon) ) / sd(lon)
+   #lat <- ( lat - mean(lat) ) / sd(lat)
+
+   lon <- ( lon - mean(lon) ) / (max(lon) - min(lon))
+   lat <- ( lat - mean(lat) ) / (max(lat) - min(lat))
+   time <- ( time - mean(time) ) / (max(time) - min(time))
+
+
+    dat <- cbind(lon, lat, time)
+
+# Attempting to handle edge case for very small number of data points (ndata < 10) leading to excessive clusters (>4).
+    ndata <- length(lon)
+    maxnc <- min(maxnc, floor(ndata/2))
+
+# Estimate optimal number of clusters using R package NbClust 
+    library('NbClust') 
+    tryCatch({  res <- NbClust(dat, distance = 'euclidean', min.nc = 1, max.nc = maxnc, method = 'ward.D2', index = 'silhouette')
+                num <- res$Best.nc[1]
+                cat(num)
+             },
+                error = function(e) { -1 }
+            )
+
+    tryCatch({  kmeans(dat, num)$cluster
+             },
+                error = function(e) { -2 }
+            )
+",     
+SUM([Lon]), SUM([Lat]), SUM([Decimal Hour of Day]), [Maximum Number of Clusters], [Cluster Size (m)]
+)

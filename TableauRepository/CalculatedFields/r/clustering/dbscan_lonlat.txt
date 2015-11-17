@@ -1,0 +1,29 @@
+SCRIPT_INT("
+    lon <- .arg1
+    lat <- .arg2
+#    mindensity <- .arg3[1]
+    minpts <-  .arg3[1]
+    clustersize_m <- .arg4[1]
+    seed <- .arg5[1]
+
+    set.seed(seed)
+
+#    minpts <- floor(mindensity * pi * clustersize_m**2)
+
+    meanlat <- mean(lat)  
+    meanlon <- mean(lon)
+    lon <- (lon - meanlon) *  cos(lat * pi / 180)
+    lat <- lat - meanlat 
+
+    dat <- cbind(lon, lat)
+
+
+    library('fpc')
+    eps <- clustersize_m / 11100.3
+    tryCatch({  dbscan(dat, eps, MinPts=minpts)$cluster
+             },
+                error = function(e) { -2 }
+            )
+",     
+SUM([Lon]), SUM([Lat]), [Minimum Number of Points Per DB Cluster], [Cluster Size (m)], [Seed]
+)
