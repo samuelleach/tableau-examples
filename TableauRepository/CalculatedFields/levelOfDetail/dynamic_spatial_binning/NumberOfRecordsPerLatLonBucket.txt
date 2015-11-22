@@ -1,0 +1,1 @@
+{INCLUDE [LatBucket], [LonBucket] : sum([Number of Records])}
