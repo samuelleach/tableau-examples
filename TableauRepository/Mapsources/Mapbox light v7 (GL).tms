@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0315.0125                                -->
+<mapsource inline='true' source-platform='mac' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <connection api-key='pk.eyJ1Ijoic2FtdWVsbGVhY2giLCJhIjoieDMxY1JQdyJ9.OdywUFfKys-uOXlUYnvvnw' class='MapBox' description='' full-url='https://api.mapbox.com/styles/v1/samuelleach/{L}/tiles/{Z}/{X}/{Y}{D}?access_token=pk.eyJ1Ijoic2FtdWVsbGVhY2giLCJhIjoieDMxY1JQdyJ9.OdywUFfKys-uOXlUYnvvnw' inline='true' layer-separator=',' offline='' port='443' server='api.mapbox.com' service='https' tileset='US/normal' url-format='/styles/v1/samuelleach/{L}/tiles/{Z}/{X}/{Y}{D}?access_token=pk.eyJ1Ijoic2FtdWVsbGVhY2giLCJhIjoieDMxY1JQdyJ9.OdywUFfKys-uOXlUYnvvnw' username='samuelleach' wait-tile-color='#dddddd' />
+  <languages />
+  <layers>
+    <layer display-name='Light' name='cinru4efm00dycam0lubkr18q' show-ui='true' type='features' />
+  </layers>
+  <properties />
+  <map-styles>
+    <map-style display-name='Mapbox light v7 (GL)' name='Mapbox light v7 (GL)' wait-tile-color='#dddddd'>
+      <map-layer-style name='Light' request-string='cinru4efm00dycam0lubkr18q' />
+    </map-style>
+  </map-styles>
+  <mapsource-defaults version='9.3'>
+    <style>
+      <style-rule element='map-layer'>
+        <format attr='enabled' id='cinru4efm00dycam0lubkr18q' value='true' />
+      </style-rule>
+      <style-rule element='map'>
+        <format attr='washout' value='0' />
+      </style-rule>
+    </style>
+  </mapsource-defaults>
+  <map-attribution copyright-string='About Maps' copyright-url='http://www.tableau.com/mapdata' short-copyright-string='' />
+</mapsource>
