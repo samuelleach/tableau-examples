@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0315.0125                                -->
+<mapsource inline='true' source-platform='mac' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <connection api-key='pk.eyJ1Ijoic2FtdWVsbGVhY2giLCJhIjoiY2loeHhpdTZ6MDBhMXZrbTVnMjYzbmYwYiJ9.Cte5oospWS8CbxxlicvTCg' class='MapBox' description='Mapbox Streets + Satellite' full-url='https://api.mapbox.com/v4/{L}/{Z}/{X}/{Y}{D}.png256?access_token=pk.eyJ1Ijoic2FtdWVsbGVhY2giLCJhIjoiY2loeHhpdTZ6MDBhMXZrbTVnMjYzbmYwYiJ9.Cte5oospWS8CbxxlicvTCg' inline='true' layer-separator=',' offline='' port='443' server='api.mapbox.com' service='https' tileset='US/normal' url-format='/v4/{L}/{Z}/{X}/{Y}{D}.png256?access_token=pk.eyJ1Ijoic2FtdWVsbGVhY2giLCJhIjoiY2loeHhpdTZ6MDBhMXZrbTVnMjYzbmYwYiJ9.Cte5oospWS8CbxxlicvTCg' username='' wait-tile-color='#dddddd' />
+  <languages />
+  <layers>
+    <layer display-name='Streets + Satellite' name='mapbox.streets-satellite' show-ui='true' type='features' />
+  </layers>
+  <properties />
+  <map-styles>
+    <map-style display-name='Streets + Satellite' name='Streets + Satellite' wait-tile-color='#dddddd'>
+      <map-layer-style name='Streets + Satellite' request-string='mapbox.streets-satellite' />
+    </map-style>
+  </map-styles>
+  <mapsource-defaults version='9.3'>
+    <style>
+      <style-rule element='map-layer'>
+        <format attr='enabled' id='mapbox.streets-satellite' value='true' />
+      </style-rule>
+      <style-rule element='map'>
+        <format attr='washout' value='0' />
+      </style-rule>
+    </style>
+  </mapsource-defaults>
+  <map-attribution copyright-string='About Maps' copyright-url='http://www.tableau.com/mapdata' short-copyright-string='' />
+</mapsource>

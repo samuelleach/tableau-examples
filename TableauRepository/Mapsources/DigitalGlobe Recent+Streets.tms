@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0315.0125                                -->
+<mapsource inline='true' source-platform='mac' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <connection api-key='pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNpbmJydWYxbjBvMWp2Z2t2NWU5eTZmNmUifQ.tD_5BMonfzXgTFf26QkTLQ' class='MapBox' description='DigitalGlobe Basemap imagery, backfilled with Mapbox satellite. New DigitalGlobe basmeap imagery loaded hourly. Streets overlay sourced from Mapbox and OpenStreetMap.' full-url='https://api.mapbox.com/v4/{L}/{Z}/{X}/{Y}{D}.png256?access_token=pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNpbmJydWYxbjBvMWp2Z2t2NWU5eTZmNmUifQ.tD_5BMonfzXgTFf26QkTLQ' inline='true' layer-separator=',' offline='' port='443' server='api.mapbox.com' service='https' tileset='US/normal' url-format='/v4/{L}/{Z}/{X}/{Y}{D}.png256?access_token=pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNpbmJydWYxbjBvMWp2Z2t2NWU5eTZmNmUifQ.tD_5BMonfzXgTFf26QkTLQ' username='' wait-tile-color='#dddddd' />
+  <languages />
+  <layers>
+    <layer display-name='_DigitalGlobe Maps API: GBM Imagery - Hybrid' name='digitalglobe.nal0mpda' show-ui='true' type='features' />
+  </layers>
+  <properties />
+  <map-styles>
+    <map-style display-name='DigitalGlobe Recent+Streets' name='DigitalGlobe Recent+Streets' wait-tile-color='#dddddd'>
+      <map-layer-style name='_DigitalGlobe Maps API: GBM Imagery - Hybrid' request-string='digitalglobe.nal0mpda' />
+    </map-style>
+  </map-styles>
+  <mapsource-defaults version='9.3'>
+    <style>
+      <style-rule element='map-layer'>
+        <format attr='enabled' id='digitalglobe.nal0mpda' value='true' />
+      </style-rule>
+      <style-rule element='map'>
+        <format attr='washout' value='0' />
+      </style-rule>
+    </style>
+  </mapsource-defaults>
+  <map-attribution copyright-string='About Maps' copyright-url='http://www.tableau.com/mapdata' short-copyright-string='' />
+</mapsource>
